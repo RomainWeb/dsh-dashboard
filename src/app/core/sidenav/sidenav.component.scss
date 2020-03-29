@@ -1,0 +1,21 @@
+:host {
+
+    .mat-subheader {
+        font-size: 12px !important;
+    }
+
+    mat-toolbar {
+        position: relative;
+    }
+
+    mat-nav-list {
+        .mat-list-item {
+            font-size: 14px !important;
+        }
+
+        fa-icon {
+            margin-right: 1rem;
+            color: rgba(0, 0, 0, 0.48);
+        }
+    }
+}

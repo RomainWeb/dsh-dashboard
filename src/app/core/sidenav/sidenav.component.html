@@ -1,0 +1,13 @@
+<dsh-avatar></dsh-avatar>
+
+
+<mat-nav-list *ngFor="let navItem of mainNavList$ | async">
+  <div mat-subheader>{{ navItem.title }}</div>
+  <a 
+    *ngFor="let item of navItem.items" 
+    mat-list-item
+    [routerLink]="[item.route]">
+    <fa-icon [icon]="['fal', item.icon]" size="lg"></fa-icon>
+    <span>{{ item.title }}</span>
+  </a>
+</mat-nav-list>

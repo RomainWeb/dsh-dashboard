@@ -1,0 +1,23 @@
+[
+    {
+        "title": "Main navigation",
+        "items": [
+            { "title": "Dashboard 1", "icon": "chart-line", "route": "/dashboard/dashboard-one" },
+            { "title": "Dashboard 2", "icon": "tachometer", "route": "/dashboard/dashboard-two" }
+        ]
+    },
+    {
+        "title": "Features",
+        "items": [
+            { 
+                "title": "Forms", 
+                "icon": "edit", 
+                "items": [
+                    { "title": "Inputs", "route": "." },
+                    { "title": "Layout", "route": "." },
+                    { "title": "Buttons", "route": "." }
+                ]
+            }
+        ]
+    }
+]

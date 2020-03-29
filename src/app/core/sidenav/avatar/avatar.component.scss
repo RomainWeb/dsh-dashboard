@@ -1,0 +1,26 @@
+:host {
+    .container {
+        background-image: url('/assets/img/avatar-material-background.jpg');
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        
+        img {
+            width: 80px;
+            border-radius: 50%;
+            margin: 1rem 0;
+            border: 5px solid rgba(0, 0, 0, 0.18);
+        }
+    
+        .username {
+            font-weight: 500;
+            color: rgba(0, 0, 0, 0.68);
+        }
+    
+        .role {
+            font-size: 0.715rem;
+            color: rgba(0, 0, 0, 0.48);
+            margin-bottom: 0.5rem;
+        }
+    } 
+}

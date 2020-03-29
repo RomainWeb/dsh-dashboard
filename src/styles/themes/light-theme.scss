@@ -1,0 +1,13 @@
+$dsh-default-primary: mat-palette($mat-light-blue, 500, A100, 900);
+$dsh-default-accent: mat-palette($mat-cyan, 500, 200, 900);
+
+// The warn palette is optional (spokas to red).
+$dsh-default-warn: mat-palette($mat-red);
+
+$dsh-default-theme: mat-light-theme(
+    $dsh-default-primary,
+    $dsh-default-accent,
+    $dsh-default-warn
+);
+
+.default-theme { }

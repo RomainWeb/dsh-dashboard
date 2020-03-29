@@ -1,0 +1,30 @@
+@import '../palettes/dark-palette';
+
+$dsh-dark-primary: mat-palette($mat-dark-blue, 500, 300, 900);
+$dsh-dark-accent: mat-palette($mat-indigo, 700, A200, 900);
+
+// The warn palette is optional (defaults to red).
+$dsh-dark-warn: mat-palette($mat-red);
+
+$dsh-dark-theme: mat-dark-theme(
+  $dsh-dark-primary,
+  $dsh-dark-accent,
+  $dsh-dark-warn
+);
+
+
+.dark-theme { 
+  
+  // SIDENAV
+  mat-sidenav-container {
+
+    mat-sidenav {
+        background-color: #222b45;
+    }
+
+    mat-sidenav-content {
+        background-color: #151a30;
+        color: #FFF;
+    }
+  }
+}
