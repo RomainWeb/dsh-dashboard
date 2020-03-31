@@ -1,0 +1,31 @@
+@import '~@angular/material/theming';
+
+@mixin dsh-sidenav-component-theme($theme) {
+  $accent: map-get($theme, accent);
+  $primary: map-get($theme, primary );
+  $background: map-get($theme, background);
+  $foreground: map-get($theme, foreground);
+
+  mat-nav-list {
+    a.mat-list-item {
+        font-size: 14px !important;
+
+        &.active {
+            fa-icon {
+                color: mat-color($primary);
+                transition: color 0.3s linear;
+            }
+
+            .mat-list-item-ripple {
+                border-left: mat-color($primary) 5px solid !important;
+                transition: border-width 0.3s linear !important;
+            }
+        }
+    }
+
+    fa-icon {
+        margin-right: 1rem;
+        color: rgba(0, 0, 0, 0.48);
+    }
+}
+}

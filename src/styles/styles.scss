@@ -8,10 +8,10 @@
 @import 'themes/dark-theme';
 
 // Import custom components theme
-// @import '../app/shared/components/header/header.component.theme.scss';
+@import '../app/core/sidenav/sidenav.component.theme.scss';
 
 // Import custom Material theme
-// @import './material-components/mat-sidenav-theme.scss';
+@import './material-components/mat-menu-theme.scss';
 
 // Include the common styles for Angular Material. We include this here so that you only
 // have to load a single css file for Angular Material in your app.
@@ -19,9 +19,11 @@
 @include mat-core();
 
 @mixin custom-components-theme($theme) {
-  // Custom theme
+  // Custom component
+  @include dsh-sidenav-component-theme($theme);
+
   // custom material
-  // @include mat-sidenav-theme($theme);
+  @include mat-custom-menu-theme($theme);
 }
 
 .light-theme {

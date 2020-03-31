@@ -1,0 +1,14 @@
+<mat-toolbar 
+  color="primary" 
+  class="mat-elevation-z3" 
+  fxLayout="row" 
+  fxLayoutGap="1rem">
+  <button mat-icon-button (click)="appSidenav.toggle()">
+    <mat-icon>menu</mat-icon>
+  </button>
+  <h1>Dashboard</h1>
+  <span fxFlex></span>
+  <button mat-icon-button (click)="settingSidenav.toggle()">
+    <fa-icon size="lg" [icon]="['fal', 'cog']"></fa-icon>
+  </button>
+</mat-toolbar>

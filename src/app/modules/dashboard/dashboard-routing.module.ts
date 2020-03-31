@@ -1,12 +1,13 @@
-import { DashboardOneComponent } from './dashboard-one/dashboard-one.component';
+import { ProjectsComponent } from './projects/projects.component';
+import { AnalyticsComponent } from './analytics/analytics.component';
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
 
 const routes: Routes = [
   { path: '', redirectTo: 'dashboard-one', pathMatch: 'full' },
-  { path: 'dashboard-one', component: DashboardOneComponent },
-  { path: 'dashboard-two', component: DashboardOneComponent }
+  { path: 'analytics', component: AnalyticsComponent },
+  { path: 'projects', component: ProjectsComponent }
 ];
 
 @NgModule({

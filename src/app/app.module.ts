@@ -9,12 +9,16 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { SidenavComponent } from './core/sidenav/sidenav.component';
 import { AvatarComponent } from './core/sidenav/avatar/avatar.component';
 import { HttpClientModule } from '@angular/common/http';
+import { TopbarComponent } from './core/topbar/topbar.component';
+import { SettingPanelComponent } from './core/setting-panel/setting-panel.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     SidenavComponent,
-    AvatarComponent
+    AvatarComponent,
+    TopbarComponent,
+    SettingPanelComponent
   ],
   imports: [
     BrowserModule,

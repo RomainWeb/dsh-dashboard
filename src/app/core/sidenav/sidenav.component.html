@@ -1,13 +1,35 @@
 <dsh-avatar></dsh-avatar>
 
+<ng-container *ngFor="let navItem of mainNavList$ | async">
 
-<mat-nav-list *ngFor="let navItem of mainNavList$ | async">
-  <div mat-subheader>{{ navItem.title }}</div>
-  <a 
-    *ngFor="let item of navItem.items" 
-    mat-list-item
-    [routerLink]="[item.route]">
-    <fa-icon [icon]="['fal', item.icon]" size="lg"></fa-icon>
-    <span>{{ item.title }}</span>
-  </a>
-</mat-nav-list>
+
+  <mat-accordion>
+    <div mat-subheader>{{ navItem.title }}</div>
+
+    <ng-container *ngFor="let subMenu of navItem.items">
+
+      <mat-nav-list *ngIf="!subMenu.items">
+        <a mat-list-item [routerLinkActive]="'active'" [routerLink]="[subMenu.route]">
+          <fa-icon [icon]="['fal', subMenu.icon]" size="lg"></fa-icon>
+          <span>{{ subMenu.title }}</span>
+        </a>
+      </mat-nav-list>
+
+      <mat-expansion-panel *ngIf="subMenu.items">
+        <mat-expansion-panel-header [collapsedHeight]="'50px'" [expandedHeight]="'50px'">
+          <fa-icon [icon]="['fal', subMenu.icon]"></fa-icon>
+          <span>{{ subMenu.title }}</span>
+        </mat-expansion-panel-header>
+
+        <mat-nav-list *ngFor="let subItem of subMenu.items">
+          <a mat-list-item [routerLink]="[subMenu.route + subItem.route]">{{ subItem.title }}</a>
+        </mat-nav-list>
+
+      </mat-expansion-panel>
+
+    </ng-container>
+
+    <mat-divider></mat-divider>
+
+  </mat-accordion>
+</ng-container>

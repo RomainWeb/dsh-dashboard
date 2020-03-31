@@ -1,0 +1,7 @@
+@mixin mat-custom-menu-theme($theme) {
+
+
+    .mat-menu-panel {
+        border-radius: 0 !important;
+    }
+}

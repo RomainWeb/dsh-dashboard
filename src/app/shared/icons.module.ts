@@ -1,7 +1,12 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FaIconLibrary, FontAwesomeModule } from '@fortawesome/angular-fontawesome';
-import { faChartLine, faTachometer, faEdit } from '@fortawesome/pro-light-svg-icons';
+import {
+  faChartLine,
+  faTachometer,
+  faEdit,
+  faCog
+} from '@fortawesome/pro-light-svg-icons';
 
 @NgModule({
   imports: [
@@ -15,7 +20,7 @@ import { faChartLine, faTachometer, faEdit } from '@fortawesome/pro-light-svg-ic
 export class IconsModule {
   constructor(library: FaIconLibrary) {
     library.addIcons(
-      faChartLine, faTachometer, faEdit
+      faChartLine, faTachometer, faEdit, faCog
     )
   }
 }

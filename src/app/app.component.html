@@ -1,26 +1,35 @@
 <div class="app-container light-theme">
-  <mat-toolbar 
-    color="primary" 
-    class="mat-elevation-z3" 
-    fxLayout="row" 
-    fxLayoutGap="1rem">
-    <button mat-icon-button (click)="sidenav.toggle()">
-      <mat-icon>menu</mat-icon>
-    </button>
-    <h1>Dashboard</h1>
-  </mat-toolbar>
+  
+  <dsh-topbar 
+    [appSidenav]="appSidenav" 
+    [settingSidenav]="settingSidenav">
+  </dsh-topbar>
+
   <mat-sidenav-container class="app-sidenav-container">
     <mat-sidenav
       class="app-sidenav mat-elevation-z6"
-      #sidenav
+      #appSidenav
       opened
-      [fixedTopGap]="0"
+      [fixedTopGap]="56"
       [fixedBottomGap]="0"
       [mode]="mobileQuery.matches ? 'over' : 'side'"
-      [fixedInViewport]="mobileQuery.matches" >
+      [fixedInViewport]="mobileQuery.matches">
       
       <dsh-sidenav></dsh-sidenav>
     
+    </mat-sidenav>
+
+    <mat-sidenav
+      class="app-sidenav mat-elevation-z6"
+      #settingSidenav
+      position="end"
+      [fixedTopGap]="56"
+      [fixedBottomGap]="0"
+      [mode]="'over'"
+      [fixedInViewport]="mobileQuery.matches">
+      
+      <dsh-setting-panel></dsh-setting-panel>
+
     </mat-sidenav>
 
     <mat-sidenav-content>

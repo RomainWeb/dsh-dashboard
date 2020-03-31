@@ -1,7 +1,9 @@
-:host {
+:host ::ng-deep {
 
     .mat-subheader {
         font-size: 12px !important;
+        padding: 0.5rem 1rem !important;
+        font-weight: 300;
     }
 
     mat-toolbar {
@@ -9,13 +11,63 @@
     }
 
     mat-nav-list {
-        .mat-list-item {
+        a.mat-list-item {
             font-size: 14px !important;
         }
 
         fa-icon {
             margin-right: 1rem;
             color: rgba(0, 0, 0, 0.48);
+        }
+    }
+
+    mat-expansion-panel {
+        border-radius: 0px !important;
+        background-color: inherit !important;
+        box-shadow: none !important;
+
+        mat-expansion-panel-header {
+            padding: 0 1rem;
+            font-size: 14px !important;
+
+            fa-icon {
+                margin-right: 1rem;
+                color: rgba(0, 0, 0, 0.48);
+                font-size: 16px;
+            }
+        }
+    
+        .mat-expansion-panel-content {
+    
+          .mat-expansion-panel-body {
+            padding: 0 !important;
+          }
+    
+          mat-nav-list {
+    
+            .mat-list-item {
+              height: 30px !important;
+            }
+    
+            .mat-list-item-content {
+              padding: 0 16px !important;
+            }
+          }
+        }
+
+        .mat-accordion .mat-expansion-panel:first-of-type {
+            border-top-right-radius: 0px !important;
+            border-top-left-radius: 0px !important;
+        }
+        
+        &.mat-expansion-panel-spacing {
+            padding: 0 !important;
+            margin: 0 !important;
+        }
+        
+        :last-of-type {
+            border-bottom-right-radius: 0px !important;
+            border-bottom-left-radius: 0px !important;
         }
     }
 }

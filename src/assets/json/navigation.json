@@ -2,8 +2,8 @@
     {
         "title": "Main navigation",
         "items": [
-            { "title": "Dashboard 1", "icon": "chart-line", "route": "/dashboard/dashboard-one" },
-            { "title": "Dashboard 2", "icon": "tachometer", "route": "/dashboard/dashboard-two" }
+            { "title": "Analytics", "icon": "chart-line", "route": "/dashboard/analytics" },
+            { "title": "Project", "icon": "tachometer", "route": "/dashboard/projects" }
         ]
     },
     {
