@@ -11,6 +11,10 @@ import { AvatarComponent } from './core/sidenav/avatar/avatar.component';
 import { HttpClientModule } from '@angular/common/http';
 import { TopbarComponent } from './core/topbar/topbar.component';
 import { SettingPanelComponent } from './core/setting-panel/setting-panel.component';
+import { StoreModule } from '@ngrx/store';
+import { StoreDevtoolsModule } from '@ngrx/store-devtools';
+import { reducers } from './+state';
+import { environment } from 'src/environments/environment';
 
 @NgModule({
   declarations: [
@@ -27,6 +31,8 @@ import { SettingPanelComponent } from './core/setting-panel/setting-panel.compon
     BrowserAnimationsModule,
     SharedModule,
     MaterialModule,
+    StoreModule.forRoot(reducers),
+    StoreDevtoolsModule.instrument({ maxAge: 25, logOnly: environment.production })
   ],
   providers: [],
   bootstrap: [AppComponent]

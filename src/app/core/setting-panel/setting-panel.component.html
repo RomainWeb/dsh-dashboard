@@ -1,1 +1,7 @@
-<p>setting-panel works!</p>
+<div class="container" fxLayout="column" fxLayoutGap="1rem">
+    <h4>Theme</h4>
+    <mat-divider></mat-divider>
+    <mat-slide-toggle #themeSlider (change)="toggleTheme($event)">
+        Dark theme
+    </mat-slide-toggle>
+</div>

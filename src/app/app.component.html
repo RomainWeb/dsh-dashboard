@@ -1,4 +1,4 @@
-<div class="app-container light-theme">
+<div class="app-container" [ngClass]="(theme$ | async) + '-theme'">
   
   <dsh-topbar 
     [appSidenav]="appSidenav" 

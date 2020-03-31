@@ -19,7 +19,7 @@ $dsh-dark-theme: mat-dark-theme(
   mat-sidenav-container {
 
     mat-sidenav {
-        background-color: #222b45;
+        background-color: mat-color($dsh-dark-primary);
     }
 
     mat-sidenav-content {

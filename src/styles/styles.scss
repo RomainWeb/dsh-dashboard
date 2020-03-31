@@ -27,8 +27,8 @@
 }
 
 .light-theme {
-  @include custom-components-theme($dsh-default-theme);
-  @include angular-material-theme($dsh-default-theme);
+  @include custom-components-theme($dsh-light-theme);
+  @include angular-material-theme($dsh-light-theme);
 }
 
 .dark-theme {
