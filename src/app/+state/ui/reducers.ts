@@ -7,13 +7,13 @@ export interface UiState {
 }
 
 export const initialState: UiState = {
-    theme: 'light' // | dark
+    theme: 'dark' // | dark
 }
 
 export const reducer = createReducer(
     initialState,
     on(fromActions.loadTheme, state => (
-        {...state, theme: localStorage.getItem('theme') ?? 'light'}
+        {...state, theme: localStorage.getItem('theme') ?? 'dark'}
     )),
     on(fromActions.changeTheme, (state, { theme }) => (
         { ...state, theme  }

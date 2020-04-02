@@ -1,0 +1,106 @@
+.hoverable {
+    -webkit-transition: -webkit-box-shadow .25s;
+    transition: -webkit-box-shadow .25s;
+    transition: box-shadow .25s;
+    transition: box-shadow .25s, -webkit-box-shadow .25s;
+  }
+  
+  .hoverable:hover {
+    -webkit-box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19) !important;
+    box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19) !important;
+  }
+  
+  .hoverable-light {
+    -webkit-transition: -webkit-box-shadow .25s;
+    transition: -webkit-box-shadow .25s;
+    transition: box-shadow .25s;
+    transition: box-shadow .25s, -webkit-box-shadow .25s;
+  }
+  
+  .hoverable-light:hover {
+    -webkit-box-shadow: 0 8px 17px 0 rgba(255, 255, 255, 0.2), 0 6px 20px 0 rgba(255, 255, 255, 0.19);
+    box-shadow: 0 8px 17px 0 rgba(255, 255, 255, 0.2), 0 6px 20px 0 rgba(255, 255, 255, 0.19);
+  }
+  
+  .pulse {
+    overflow: visible;
+    position: relative;
+  }
+  
+  .pulse::before {
+    content: '';
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: inherit;
+    border-radius: inherit;
+    -webkit-transition: opacity .3s, -webkit-transform .3s;
+    transition: opacity .3s, -webkit-transform .3s;
+    transition: opacity .3s, transform .3s;
+    transition: opacity .3s, transform .3s, -webkit-transform .3s;
+    -webkit-animation: pulse-animation 1s cubic-bezier(0.24, 0, 0.38, 1) infinite;
+    animation: pulse-animation 1s cubic-bezier(0.24, 0, 0.38, 1) infinite;
+    z-index: -1;
+  }
+  
+  @-webkit-keyframes pulse-animation {
+    0% {
+      opacity: 1;
+      -webkit-transform: scale(1);
+              transform: scale(1);
+    }
+    50% {
+      opacity: 0;
+      -webkit-transform: scale(1.5);
+              transform: scale(1.5);
+    }
+    100% {
+      opacity: 0;
+      -webkit-transform: scale(1.5);
+              transform: scale(1.5);
+    }
+  }
+  
+  @keyframes pulse-animation {
+    0% {
+      opacity: 1;
+      -webkit-transform: scale(1);
+              transform: scale(1);
+    }
+    50% {
+      opacity: 0;
+      -webkit-transform: scale(1.5);
+              transform: scale(1.5);
+    }
+    100% {
+      opacity: 0;
+      -webkit-transform: scale(1.5);
+              transform: scale(1.5);
+    }
+  }
+  
+  .shake {
+    animation: shake 3s infinite cubic-bezier(.36,.07,.19,.97) both;
+  }
+  
+  @keyframes shake {
+    2%, 22% {
+        transform: translate3d(-1px, 0, 0);
+    }
+  
+    4%, 20% {
+        transform: translate3d(2px, 0, 0);
+    }
+  
+    7%, 13%, 17% {
+        transform: translate3d(-4px, 0, 0);
+    }
+  
+    10%, 15% {
+        transform: translate3d(4px, 0, 0);
+    }
+  }
+  

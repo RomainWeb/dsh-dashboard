@@ -9,4 +9,10 @@ $dsh-light-theme: mat-light-theme(
     $dsh-light-warn
 );
 
-.light-theme { }
+.light-theme {
+
+    // MAT_CARD
+    .mat-card {
+        background-color: #FFF !important; // TODO Refactoring with custom card element
+    }
+}

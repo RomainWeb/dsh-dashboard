@@ -1,3 +1,5 @@
+import { MaterialModule } from './../../shared/material.module';
+import { SharedModule } from './../../shared/shared.module';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
@@ -18,7 +20,9 @@ import { OverlayContainer } from '@angular/cdk/overlay';
   ],
   imports: [
     CommonModule,
-    DashboardRoutingModule
+    DashboardRoutingModule,
+    SharedModule,
+    MaterialModule
   ]
 })
 export class DashboardModule {

@@ -1,0 +1,30 @@
+[
+    { 
+        "icon": "cloud-upload", 
+        "route": ".", 
+        "number": 1234, 
+        "title": "Uploads",
+        "color": "#3949ab"
+    },
+    { 
+        "icon": "comments", 
+        "route": ".", 
+        "number": 122315, 
+        "title": "Comments",
+        "color": "#7b1fa2"
+    },
+    { 
+        "icon": "chart-network", 
+        "route": ".", 
+        "number": 12, 
+        "title": "Incomes",
+        "color": "#d81b60"
+    },
+    { 
+        "icon": "bell", 
+        "route": ".", 
+        "number": 99, 
+        "title": "Nofications",
+        "color": "#ff9800"
+    }
+]

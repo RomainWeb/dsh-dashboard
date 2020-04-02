@@ -1,1 +1,33 @@
-<p>analytics works!</p>
+<div class="container" fxLayout.gt-xs ="row"  fxLayout="column">
+    <mat-progress-bar mode="query" *ngIf="isLoading"></mat-progress-bar>
+    <div 
+        *ngIf="!isLoading" 
+        fxFlex 
+        class="card-number-container" 
+        fxLayout="column" 
+        fxLayout.gt-xs ="row" 
+        fxLayoutGap="1rem">
+        <mat-card 
+            class="hoverable" 
+            fxFlex 
+            *ngFor="let card of cardNumberList">
+            <mat-card-content fxLayout="row">
+                <div class="icon" fxFlexAlign="center">
+                    <fa-icon [ngStyle]="{'color': card.color}" [icon]="['fal', card.icon]" size="2x"></fa-icon>
+                </div>
+    
+                <mat-divider [vertical]="true"></mat-divider>
+    
+                <div class="content" fxLayout="column">
+                    <div class="title">{{ card.title }}</div>
+                    <div class="number">{{ card.number }}</div>
+                </div>
+            </mat-card-content>
+        </mat-card>
+    </div> <!-- LEFT COLUMN -->
+
+    
+    <div fxFlex.gt-sm="20">
+        <div ></div>
+    </div><!-- RIGHT COLUMN -->
+</div>

@@ -5,7 +5,7 @@ import { Routes, RouterModule } from '@angular/router';
 
 
 const routes: Routes = [
-  { path: '', redirectTo: 'dashboard-one', pathMatch: 'full' },
+  { path: '', redirectTo: 'analytics', pathMatch: 'full' },
   { path: 'analytics', component: AnalyticsComponent },
   { path: 'projects', component: ProjectsComponent }
 ];

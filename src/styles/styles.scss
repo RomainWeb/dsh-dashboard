@@ -12,6 +12,7 @@
 
 // Import custom Material theme
 @import './material-components/mat-menu-theme.scss';
+@import './material-components/mat-card-theme.scss';
 
 // Include the common styles for Angular Material. We include this here so that you only
 // have to load a single css file for Angular Material in your app.
@@ -24,6 +25,7 @@
 
   // custom material
   @include mat-custom-menu-theme($theme);
+  @include mat-custom-card-theme($theme);
 }
 
 .light-theme {
