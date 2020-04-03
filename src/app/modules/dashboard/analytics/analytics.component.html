@@ -1,4 +1,4 @@
-<div class="container" fxLayout.gt-xs ="row"  fxLayout="column">
+<div class="container" fxLayout.gt-xs ="row"  fxLayout="column" fxLayoutGap="1rem">
     <mat-progress-bar mode="query" *ngIf="isLoading"></mat-progress-bar>
     <div 
         *ngIf="!isLoading" 
@@ -15,8 +15,13 @@
         </dsh-card-number>
     </div> <!-- LEFT COLUMN -->
 
+    <mat-divider
+        [vertical]="true">
+    </mat-divider>
     
     <div fxFlex.gt-sm="20">
-        <div ></div>
+        <div fxLayout="column">
+            <dsh-card-date></dsh-card-date>
+        </div>
     </div><!-- RIGHT COLUMN -->
 </div>

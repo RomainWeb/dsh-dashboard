@@ -1,0 +1,23 @@
+:host {
+
+    mat-card {
+
+        mat-card-title {
+            font-size: 16px !important;
+            font-weight: 300;
+        }
+
+        mat-card-content {
+            padding: 2rem 0;
+
+            .month, .year {
+                font-size: 1.375rem !important;
+                opacity: 0.68 !important;
+            }
+
+            .day {
+                font-size: 2.5rem !important;
+            }
+        }
+    }
+}

@@ -11,6 +11,7 @@ import { AnalyticsComponent } from './analytics/analytics.component';
 import { ProjectsComponent } from './projects/projects.component';
 import { OverlayContainer } from '@angular/cdk/overlay';
 import { CardNumberComponent } from './analytics/card-number/card-number.component';
+import { CardDateComponent } from './analytics/card-date/card-date.component';
 
 
 @NgModule({
@@ -18,7 +19,8 @@ import { CardNumberComponent } from './analytics/card-number/card-number.compone
     DashboardComponent,
     AnalyticsComponent,
     ProjectsComponent,
-    CardNumberComponent
+    CardNumberComponent,
+    CardDateComponent
   ],
   imports: [
     CommonModule,
