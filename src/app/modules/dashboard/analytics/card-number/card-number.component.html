@@ -1,0 +1,22 @@
+<mat-card class="hoverable">
+    <mat-card-content fxLayout="row">
+        <div class="icon" fxFlexAlign="center">
+            <fa-icon [ngStyle]="{'color': cardNumber.color}" [icon]="['fal', cardNumber.icon]" size="2x"></fa-icon>
+        </div>
+
+        <mat-divider [vertical]="true"></mat-divider>
+
+        <div class="content" fxLayout="column">
+            <div class="title">{{ cardNumber.title }}</div>
+            <div class="loader" *ngIf="isLoading">
+                <fa-icon [icon]="['fal', 'spinner']" [spin]="true"></fa-icon>
+            </div>
+            <div 
+                [@leftToRight]
+                class="number" 
+                *ngIf="!isLoading">
+                {{ cardResult.number }}
+            </div>
+        </div>
+    </mat-card-content>
+</mat-card>

@@ -1,6 +1,7 @@
 export interface CardNumber {
+    id: number;
     icon: string;
     route: string;
-    number: number;
     title: string;
+    color: string;
 }

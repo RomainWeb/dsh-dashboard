@@ -1,8 +1,8 @@
 import { Observable } from 'rxjs';
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { CardNumber } from 'src/app/shared/model/dashboard/card-number';
-import { delay } from 'rxjs/operators';
+
+const URL_API = 'http://monapi:4200/api';
 
 @Injectable({
   providedIn: 'root'
@@ -13,10 +13,7 @@ export class DashboardService {
     private http: HttpClient
   ) { }
 
-  getCardNumberList(): Observable<CardNumber[]> {
-    return this.http.get<CardNumber[]>('./assets/mock-data/dashboard/card-number-list.json')
-                    .pipe(
-                      delay(500)
-                    );
+  getNumberCardById(id: number): Observable<any> {
+    return this.http.get<any>(`${URL_API}/card-number/${id}`);
   }
 }

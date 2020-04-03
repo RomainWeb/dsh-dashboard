@@ -10,13 +10,15 @@ import { DashboardComponent } from './dashboard.component';
 import { AnalyticsComponent } from './analytics/analytics.component';
 import { ProjectsComponent } from './projects/projects.component';
 import { OverlayContainer } from '@angular/cdk/overlay';
+import { CardNumberComponent } from './analytics/card-number/card-number.component';
 
 
 @NgModule({
   declarations: [
     DashboardComponent,
     AnalyticsComponent,
-    ProjectsComponent
+    ProjectsComponent,
+    CardNumberComponent
   ],
   imports: [
     CommonModule,

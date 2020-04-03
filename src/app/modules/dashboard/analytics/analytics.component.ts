@@ -10,8 +10,36 @@ import { tap } from 'rxjs/operators';
   styleUrls: ['./analytics.component.scss']
 })
 export class AnalyticsComponent implements OnInit, OnDestroy {
-  cardNumberList: CardNumber[];
-  cardNumberListSub: Subscription;
+  cardNumberList: CardNumber[] = [
+    {
+      id: 1,
+      icon: 'cloud-upload',
+      route: '.',
+      title: 'Uploads',
+      color: '#3949ab'
+    },
+    {
+      id: 2,
+      icon: 'comments',
+      route: '.',
+      title: 'Comments',
+      color: '#7b1fa2'
+    },
+    {
+      id: 3,
+      icon: 'chart-network',
+      route: '.',
+      title: 'Incomes',
+      color: '#d81b60'
+    },
+    {
+      id: 4,
+      icon: 'bell',
+      route: '.',
+      title: 'Nofications',
+      color: '#ff9800'
+    }
+  ];
   isLoading = false;
 
   constructor(
@@ -19,18 +47,16 @@ export class AnalyticsComponent implements OnInit, OnDestroy {
   ) { }
 
   ngOnInit(): void {
-    this.loadCardNumberList();
   }
 
   ngOnDestroy(): void {
-    this.cardNumberListSub.unsubscribe();
   }
 
   loadCardNumberList(): void {
     this.isLoading = true;
-    this.cardNumberListSub = this.dashboardService.getCardNumberList().subscribe((result) => {
-      this.cardNumberList = result;
-      this.isLoading = false;
-    })
+    // this.cardNumberListSub = this.dashboardService.getCardNumberList().subscribe((result) => {
+    //   this.cardNumberList = result;
+    //   this.isLoading = false;
+    // })
   }
 }

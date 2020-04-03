@@ -8,13 +8,14 @@ import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { SidenavComponent } from './core/sidenav/sidenav.component';
 import { AvatarComponent } from './core/sidenav/avatar/avatar.component';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { TopbarComponent } from './core/topbar/topbar.component';
 import { SettingPanelComponent } from './core/setting-panel/setting-panel.component';
 import { StoreModule } from '@ngrx/store';
 import { StoreDevtoolsModule } from '@ngrx/store-devtools';
 import { reducers } from './+state';
 import { environment } from 'src/environments/environment';
+import { FakeBackendInterceptor } from './shared/helpers/fake-backend-interceptor';
 
 @NgModule({
   declarations: [
@@ -34,7 +35,13 @@ import { environment } from 'src/environments/environment';
     StoreModule.forRoot(reducers),
     StoreDevtoolsModule.instrument({ maxAge: 25, logOnly: environment.production })
   ],
-  providers: [],
+  providers: [
+    {
+      provide: HTTP_INTERCEPTORS,
+      useClass: FakeBackendInterceptor,
+      multi: true
+    }
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

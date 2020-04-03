@@ -7,23 +7,12 @@
         fxLayout="column" 
         fxLayout.gt-xs ="row" 
         fxLayoutGap="1rem">
-        <mat-card 
-            class="hoverable" 
+
+        <dsh-card-number 
             fxFlex 
-            *ngFor="let card of cardNumberList">
-            <mat-card-content fxLayout="row">
-                <div class="icon" fxFlexAlign="center">
-                    <fa-icon [ngStyle]="{'color': card.color}" [icon]="['fal', card.icon]" size="2x"></fa-icon>
-                </div>
-    
-                <mat-divider [vertical]="true"></mat-divider>
-    
-                <div class="content" fxLayout="column">
-                    <div class="title">{{ card.title }}</div>
-                    <div class="number">{{ card.number }}</div>
-                </div>
-            </mat-card-content>
-        </mat-card>
+            *ngFor="let card of cardNumberList" 
+            [cardNumber]="card">
+        </dsh-card-number>
     </div> <!-- LEFT COLUMN -->
 
     
