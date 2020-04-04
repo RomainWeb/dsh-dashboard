@@ -1,0 +1,7 @@
+{
+    "terminal.integrated.shell.windows": "cmd.exe",
+    "terminal.integrated.shellArgs.windows": [
+        "/k",
+        "C:\\cmder\\vendor\\bin\\vscode_init.cmd"
+    ],
+}

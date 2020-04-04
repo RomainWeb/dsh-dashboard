@@ -22,7 +22,7 @@ export class AppComponent implements OnInit, AfterViewInit {
     private store: Store<AppState>,
     private overlayContainer: OverlayContainer
   ) {
-    this.mobileQuery = media.matchMedia('(max-width: 600px)');
+    this.mobileQuery = media.matchMedia('(max-width: 959px)');
   }
 
   ngOnInit(): void {

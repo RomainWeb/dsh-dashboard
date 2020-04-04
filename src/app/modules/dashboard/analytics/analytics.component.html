@@ -5,11 +5,15 @@
         fxFlex 
         class="card-number-container" 
         fxLayout="column" 
-        fxLayout.gt-xs ="row" 
-        fxLayoutGap="1rem">
+        fxLayout.gt-xs ="row wrap"
+        fxLayout.gt-md ="row"
+        fxLayoutAlign.gt-xs="space-around start"
+        fxLayoutGap.gt-md="1rem">
 
         <dsh-card-number 
-            fxFlex 
+            fxFlex
+            fxFlex.gt-xs="40"
+            fxFlex.gt-md="100"
             *ngFor="let card of cardNumberList" 
             [cardNumber]="card">
         </dsh-card-number>
