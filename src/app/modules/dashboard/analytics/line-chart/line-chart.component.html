@@ -10,7 +10,7 @@
 					<h4>Loading datas...</h4>
 			</div>
 			<div *ngIf="!isLoading">
-					<div echarts [options]="options" [theme]="theme" class="demo-chart"></div>
+					<div echarts [options]="options" [theme]="theme$ | async" class="demo-chart"></div>
 			</div>
 	</mat-card-content>
 </mat-card>

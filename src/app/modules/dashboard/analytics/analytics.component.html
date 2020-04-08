@@ -22,6 +22,13 @@
         <div>
             <dsh-line-chart></dsh-line-chart>
         </div>
+
+        <div fxLayout="row">
+            <div fxFlex="50">
+
+            </div><!-- donut chart -->
+
+        </div>
     </div><!-- LEFT COLUMN -->
 
     <mat-divider
@@ -29,8 +36,9 @@
     </mat-divider>
     
     <div fxFlex.gt-sm="20">
-        <div fxLayout="column">
+        <div fxLayout="column" fxLayoutGap="1rem">
             <dsh-card-date></dsh-card-date>
+            <dsh-card-weather></dsh-card-weather>
         </div>
     </div><!-- RIGHT COLUMN -->
 </div>

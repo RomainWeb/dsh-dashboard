@@ -1,0 +1,46 @@
+:host {
+
+  mat-card {
+
+    mat-card-header {
+
+      mat-card-title {
+
+        fa-icon {
+          margin-right: 0.5rem;
+        }
+      }
+    }
+
+    mat-card-content {
+
+      .weather-icon {
+        opacity: 0.48;
+        padding: 1.5rem 0;
+        text-align: center;
+      }
+
+      .weather-temp {
+        font-size: 2rem;
+        margin-bottom: 1rem;
+        text-align: center;
+
+        .weather-degree {
+          opacity: 0.48;
+        }
+      }
+      
+      .prevision {
+        padding: 0.5rem;
+
+        fa-icon {
+          margin-right: 0.5rem
+        }
+
+        .degree, .day {
+          opacity: 0.48;
+        }
+      }
+    }
+  }
+}

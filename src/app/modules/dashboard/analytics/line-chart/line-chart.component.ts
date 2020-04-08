@@ -1,38 +1,27 @@
 import { AppState } from 'src/app/+state/index';
-import { Store, select } from '@ngrx/store';
+import { Store } from '@ngrx/store';
 import { Component, OnInit, AfterViewInit, OnDestroy } from '@angular/core';
 import { format, subWeeks } from 'date-fns';
 import * as fromUiSelectors from 'src/app/+state/ui/selectors';
-import { tap, map, delay } from 'rxjs/operators';
-import { Subscription } from 'rxjs';
+import { Subscription, Observable } from 'rxjs';
+import { delay } from 'rxjs/operators';
 
 @Component({
   selector: 'dsh-line-chart',
   templateUrl: './line-chart.component.html',
   styleUrls: ['./line-chart.component.scss']
 })
-export class LineChartComponent implements OnInit, AfterViewInit, OnDestroy {
+export class LineChartComponent implements OnInit, AfterViewInit {
   isLoading = true;
   options: any;
-  theme: string;
-  themeSub: Subscription;
+  theme$: Observable<string>;
 
   constructor(
     private store: Store<AppState>
   ) { }
 
   ngAfterViewInit(): void {
-    this.themeSub = this.store.select(fromUiSelectors.getThemeState).subscribe((theme) => {
-      if (theme === 'dark') {
-        this.theme = 'dark';
-      } else {
-        this.theme = undefined;
-      }
-    })
-  }
-
-  ngOnDestroy(): void {
-    this.themeSub.unsubscribe();
+    this.theme$ = this.store.select(fromUiSelectors.getThemeState);
   }
 
   ngOnInit(): void {

@@ -54,9 +54,5 @@ export class AnalyticsComponent implements OnInit, OnDestroy {
 
   loadCardNumberList(): void {
     this.isLoading = true;
-    // this.cardNumberListSub = this.dashboardService.getCardNumberList().subscribe((result) => {
-    //   this.cardNumberList = result;
-    //   this.isLoading = false;
-    // })
   }
 }

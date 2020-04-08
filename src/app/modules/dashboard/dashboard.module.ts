@@ -16,6 +16,8 @@ import { OverlayContainer } from '@angular/cdk/overlay';
 import { CardNumberComponent } from './analytics/card-number/card-number.component';
 import { CardDateComponent } from './analytics/card-date/card-date.component';
 import { LineChartComponent } from './analytics/line-chart/line-chart.component';
+import { CardWeatherComponent } from './analytics/card-weather/card-weather.component';
+import { CardDonutComponent } from './analytics/card-donut/card-donut.component';
 
 
 @NgModule({
@@ -25,7 +27,9 @@ import { LineChartComponent } from './analytics/line-chart/line-chart.component'
     ProjectsComponent,
     CardNumberComponent,
     CardDateComponent,
-    LineChartComponent
+    LineChartComponent,
+    CardWeatherComponent,
+    CardDonutComponent
   ],
   imports: [
     CommonModule,

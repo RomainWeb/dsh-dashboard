@@ -1,0 +1,37 @@
+<mat-card class="hoverable">
+  <mat-card-header>
+		<mat-card-title>
+      <fa-icon size="sm" [icon]="['fal', 'map-pin']"></fa-icon>
+      <span>Montpellier</span>
+    </mat-card-title>
+	</mat-card-header>
+	<mat-card-content fxLayout="column" fxLayoutAlign="center stretch">
+		<div class="weather-icon">
+      <fa-icon size="5x" [icon]="['fal', 'cloud-moon-rain']"></fa-icon>
+    </div>
+    <div class="weather-temp">
+      <span>23</span><span class="weather-degree">°C</span>
+    </div>
+    <span>
+      <mat-divider>
+      </mat-divider>
+    </span>
+    <div class="prevision" fxLayout="column" fxLayoutGap="1rem">
+      <div fxFlex fxLayout="row">
+        <span fxFlex class="day">Monday</span>
+        <span><fa-icon size="lg" [icon]="['fal', 'cloud-sun']"></fa-icon></span>
+        <span class="degree">19°C</span>
+      </div>
+      <div fxFlex fxLayout="row">
+        <span fxFlex class="day">Tuesday</span>
+        <span><fa-icon size="lg" [icon]="['fal', 'thunderstorm-sun']"></fa-icon></span>
+        <span class="degree">21°C</span>
+      </div>
+      <div fxFlex fxLayout="row">
+        <span fxFlex class="day">Wednesday</span>
+        <span><fa-icon size="lg" [icon]="['fal', 'sun']"></fa-icon></span>
+        <span class="degree">22°C</span>
+      </div>
+    </div>
+	</mat-card-content>
+</mat-card>
