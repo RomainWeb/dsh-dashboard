@@ -5,12 +5,12 @@
 	<mat-divider>
 	</mat-divider>
 	<mat-card-content style="height: 450px;" fxLayout="column" fxLayoutAlign="center stretch">
-			<div class="loader" *ngIf="isLoading">
+		<div class="loader" *ngIf="isLoading">
 					<fa-icon size="5x" [icon]="['fal', 'spinner']" [spin]="true"></fa-icon>
 					<h4>Loading datas...</h4>
 			</div>
-			<div *ngIf="!isLoading">
-					<div echarts [options]="options" [theme]="theme$ | async" class="demo-chart"></div>
-			</div>
+		<div *ngIf="!isLoading">
+			<div echarts [options]="options" [theme]="theme$ | async" class="demo-chart"></div>
+		</div>
 	</mat-card-content>
 </mat-card>

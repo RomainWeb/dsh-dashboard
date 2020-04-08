@@ -1,0 +1,16 @@
+<mat-card class="hoverable">
+	<mat-card-header>
+		<mat-card-title><span class="strong">Drinks evolution</span> based on 3 months data</mat-card-title>
+	</mat-card-header>
+	<mat-divider>
+	</mat-divider>
+	<mat-card-content fxLayout="column" fxLayoutAlign="center center">
+			<div class="loader" *ngIf="isLoading">
+					<fa-icon size="5x" [icon]="['fal', 'spinner']" [spin]="true"></fa-icon>
+					<h4>Loading datas...</h4>
+			</div>
+			<div *ngIf="!isLoading" style="width: 100%;">
+					<div echarts [options]="options" [theme]="theme$ | async"></div>
+			</div>
+	</mat-card-content>
+</mat-card>

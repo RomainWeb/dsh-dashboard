@@ -21,7 +21,7 @@ export class LineChartComponent implements OnInit, AfterViewInit {
   ) { }
 
   ngAfterViewInit(): void {
-    this.theme$ = this.store.select(fromUiSelectors.getThemeState);
+    this.theme$ = this.store.select(fromUiSelectors.getThemeState).pipe(delay(0));
   }
 
   ngOnInit(): void {
@@ -33,8 +33,6 @@ export class LineChartComponent implements OnInit, AfterViewInit {
     const xAxisData = [];
     const sales = [];
     const visitors = [];
-
-    const colorPalette = ['#5c6bc0','#29b6f6','#ab47bc','#ec407a','#ea7e53','#eedd78','#73a373','#73b9bc','#7289ab', '#91ca8c','#f49f42'];
 
     for (let i = 0; i < 50; i++) {
       xAxisData.push(format(subWeeks(new Date(), i), 'LLL dd yyyy'));
@@ -48,7 +46,6 @@ export class LineChartComponent implements OnInit, AfterViewInit {
         align: 'left'
       },
       tooltip: {},
-      colorPalette,
       xAxis: {
         data: xAxisData,
         silent: false,
