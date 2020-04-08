@@ -10,7 +10,8 @@ import {
   faComments,
   faChartNetwork,
   faBell,
-  faSpinner
+  faSpinner,
+  faHeart
 } from '@fortawesome/pro-light-svg-icons';
 
 @NgModule({
@@ -26,7 +27,7 @@ export class IconsModule {
   constructor(library: FaIconLibrary) {
     library.addIcons(
       faChartLine, faTachometer, faEdit, faCog, faCloudUpload,
-      faComments, faChartNetwork, faBell, faSpinner
+      faComments, faChartNetwork, faBell, faSpinner, faHeart
     )
   }
 }

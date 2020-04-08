@@ -7,7 +7,22 @@
   $foreground: map-get($theme, foreground);
 
 
-    mat-card {
-      background-color: mat-color($primary) !important;
+  mat-card {
+    padding: 0 !important;
+
+    mat-card-header, mat-card-actions {
+      padding: 1rem !important;
+
+      mat-card-title {
+        font-weight: 300;
+        font-size: 1rem;
+        margin-bottom: 0 !important;
+        opacity: 0.78;
+
+        span.strong {
+          font-weight: 500;
+        }
+      }
     }
+  }
 }

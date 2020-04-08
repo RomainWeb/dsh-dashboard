@@ -27,4 +27,20 @@ $dsh-dark-theme: mat-dark-theme(
         color: #FFF;
     }
   }
+
+  // MAT_CARD
+  mat-card {
+    background-color: mat-color($dsh-dark-primary) !important;
+
+    mat-card-header {
+      background-color: mat-color($dsh-dark-primary, A400);
+    }
+  }
+
+  // TOOLBAR
+  mat-toolbar {
+    &.app-top-bar {
+      background-color: mat-color($dsh-dark-primary, A400) !important;
+    }
+  }
 }

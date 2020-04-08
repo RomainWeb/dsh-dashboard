@@ -28,6 +28,8 @@
     "@ngrx/store": "^9.0.0",
     "@ngrx/store-devtools": "^9.0.0",
     "date-fns": "^2.11.1",
+    "echarts": "^4.7.0",
+    "ngx-echarts": "^4.2.2",
     "rxjs": "~6.5.4",
     "tslib": "^1.10.0",
     "zone.js": "~0.10.2"
@@ -37,6 +39,7 @@
     "@angular/cli": "~9.1.0",
     "@angular/compiler-cli": "~9.1.0",
     "@angular/language-service": "~9.1.0",
+    "@types/echarts": "^4.4.5",
     "@types/jasmine": "~3.5.0",
     "@types/jasminewd2": "~2.0.3",
     "@types/node": "^12.11.1",

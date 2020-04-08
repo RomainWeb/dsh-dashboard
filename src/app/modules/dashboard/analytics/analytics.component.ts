@@ -16,27 +16,27 @@ export class AnalyticsComponent implements OnInit, OnDestroy {
       icon: 'cloud-upload',
       route: '.',
       title: 'Uploads',
-      color: '#3949ab'
+      color: '#5c6bc0'
     },
     {
       id: 2,
       icon: 'comments',
       route: '.',
       title: 'Comments',
-      color: '#7b1fa2'
+      color: '#29b6f6'
     },
     {
       id: 3,
       icon: 'chart-network',
       route: '.',
       title: 'Incomes',
-      color: '#d81b60'
+      color: '#ab47bc'
     },
     {
       id: 4,
-      icon: 'bell',
+      icon: 'heart',
       route: '.',
-      title: 'Nofications',
+      title: 'Likes',
       color: '#ff9800'
     }
   ];

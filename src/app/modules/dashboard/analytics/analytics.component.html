@@ -1,23 +1,28 @@
 <div class="container" fxLayout.gt-xs ="row"  fxLayout="column" fxLayoutGap="1rem">
-    <mat-progress-bar mode="query" *ngIf="isLoading"></mat-progress-bar>
-    <div 
-        *ngIf="!isLoading" 
-        fxFlex 
-        class="card-number-container" 
-        fxLayout="column" 
-        fxLayout.gt-xs ="row wrap"
-        fxLayout.gt-md ="row"
-        fxLayoutAlign.gt-xs="space-around start"
-        fxLayoutGap.gt-md="1rem">
+    <div fxFlex fxLayout="column" fxLayoutGap="1rem">
+        <div 
+            [hidden]="isLoading"
+            fxFlex 
+            class="card-number-container" 
+            fxLayout="column" 
+            fxLayout.gt-xs ="row wrap"
+            fxLayout.gt-md ="row"
+            fxLayoutAlign.gt-xs="space-around start"
+            fxLayoutGap.gt-md="1rem">
 
-        <dsh-card-number 
-            fxFlex
-            fxFlex.gt-xs="40"
-            fxFlex.gt-md="100"
-            *ngFor="let card of cardNumberList" 
-            [cardNumber]="card">
-        </dsh-card-number>
-    </div> <!-- LEFT COLUMN -->
+            <dsh-card-number 
+                fxFlex
+                fxFlex.gt-xs="40"
+                fxFlex.gt-md="100"
+                *ngFor="let card of cardNumberList" 
+                [cardNumber]="card">
+            </dsh-card-number>
+        </div> 
+
+        <div>
+            <dsh-line-chart></dsh-line-chart>
+        </div>
+    </div><!-- LEFT COLUMN -->
 
     <mat-divider
         [vertical]="true">

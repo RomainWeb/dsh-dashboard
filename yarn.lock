@@ -1101,6 +1101,13 @@
   resolved "https://registry.yarnpkg.com/@types/color-name/-/color-name-1.1.1.tgz#1c1261bbeaa10a8055bbc5d8ab84b7b2afc846a0"
   integrity sha512-rr+OQyAjxze7GgWrSaJwydHStIhHq2lvY3BOC2Mj7KnzI7XK0Uw1TOOdI9lDoajEbSWLiYgoo4f1R51erQfhPQ==
 
+"@types/echarts@^4.4.5":
+  version "4.4.5"
+  resolved "https://registry.yarnpkg.com/@types/echarts/-/echarts-4.4.5.tgz#b633b87b707b43cf361b067206fd9073c7b0c06c"
+  integrity sha512-zs9iO4OKtzt75EmP3AKLmtQJ8JCdOkdax7qzV1PpbBDEdOr2JY6Iu2jiH188+UewpFsfNQWLhlUqcXo/X3ScGA==
+  dependencies:
+    "@types/zrender" "*"
+
 "@types/events@*":
   version "3.0.0"
   resolved "https://registry.yarnpkg.com/@types/events/-/events-3.0.0.tgz#2862f3f58a9a7f7c3e78d79f130dd4d71c25c2a7"
@@ -1165,6 +1172,11 @@
     "@types/node" "*"
     "@types/source-list-map" "*"
     source-map "^0.6.1"
+
+"@types/zrender@*":
+  version "4.0.0"
+  resolved "https://registry.yarnpkg.com/@types/zrender/-/zrender-4.0.0.tgz#a6806f12ec4eccaaebd9b0d816f049aca6188fbd"
+  integrity sha512-s89GOIeKFiod2KSqHkfd2rzx+T2DVu7ihZCBEBnhFrzvQPUmzvDSBot9Fi1DfMQm9Odg+rTqoMGC38RvrwJK2w==
 
 "@webassemblyjs/ast@1.8.5":
   version "1.8.5"
@@ -3115,6 +3127,13 @@ ecc-jsbn@~0.1.1:
   dependencies:
     jsbn "~0.1.0"
     safer-buffer "^2.1.0"
+
+echarts@^4.7.0:
+  version "4.7.0"
+  resolved "https://registry.yarnpkg.com/echarts/-/echarts-4.7.0.tgz#5b3875a4c2f91e3929425fabab9eace7e4098b3f"
+  integrity sha512-NlOTdUcAsIyCCG+N4uh0ZEvXtrPW2jvcuqf03RyqYeCKzyPbiOQ4I3MdKXMhxG3lBdqQNdNXVT71SB4KTQjN0A==
+  dependencies:
+    zrender "4.3.0"
 
 ee-first@1.1.1:
   version "1.1.1"
@@ -5531,6 +5550,13 @@ neo-async@^2.5.0, neo-async@^2.6.1:
   version "2.6.1"
   resolved "https://registry.yarnpkg.com/neo-async/-/neo-async-2.6.1.tgz#ac27ada66167fa8849a6addd837f6b189ad2081c"
   integrity sha512-iyam8fBuCUpWeKPGpaNMetEocMt364qkCsfL9JuhjXX6dRnguRVOfk2GZaDpPjcOKiiXCPINZC1GczQ7iTq3Zw==
+
+ngx-echarts@^4.2.2:
+  version "4.2.2"
+  resolved "https://registry.yarnpkg.com/ngx-echarts/-/ngx-echarts-4.2.2.tgz#9eb5f69f923084869ea014f117915cd6cc366343"
+  integrity sha512-iLxOFnfKhUYP8Qw22AUY2ugSEd1Uvt6AeYhiaSqpg/G6NDmM/NwpdLt+fGAjax2aY7e94ORuwhXnl2gxtNzt7Q==
+  dependencies:
+    tslib "^1.9.0"
 
 nice-try@^1.0.4:
   version "1.0.5"
@@ -8668,3 +8694,8 @@ zone.js@~0.10.2:
   version "0.10.3"
   resolved "https://registry.yarnpkg.com/zone.js/-/zone.js-0.10.3.tgz#3e5e4da03c607c9dcd92e37dd35687a14a140c16"
   integrity sha512-LXVLVEq0NNOqK/fLJo3d0kfzd4sxwn2/h67/02pjCjfKDxgx1i9QqpvtHD8CrBnSSwMw5+dy11O7FRX5mkO7Cg==
+
+zrender@4.3.0:
+  version "4.3.0"
+  resolved "https://registry.yarnpkg.com/zrender/-/zrender-4.3.0.tgz#9f056121b20bbae44414d287bf6a119ff7042661"
+  integrity sha512-Dii6j2bDsPkxQayuVf2DXJeruIB/mKVxxcGRZQ9GExiBd4c3w7+oBuvo1O/JGHeFeA1nCmSDVDs/S7yKZG1nrA==

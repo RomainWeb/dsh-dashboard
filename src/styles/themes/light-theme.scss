@@ -4,15 +4,21 @@ $dsh-light-accent: mat-palette($mat-purple, 500, A200, 900);
 $dsh-light-warn: mat-palette($mat-red);
 
 $dsh-light-theme: mat-light-theme(
-    $dsh-light-primary,
-    $dsh-light-accent,
-    $dsh-light-warn
+  $dsh-light-primary,
+  $dsh-light-accent,
+  $dsh-light-warn
 );
 
 .light-theme {
 
-    // MAT_CARD
-    .mat-card {
-        background-color: #FFF !important; // TODO Refactoring with custom card element
+	mat-card {
+		background-color: #FFF !important;
     }
+    
+  mat-toolbar {
+    &.app-top-bar {
+      background-color: mat-color($dsh-light-primary, 500) !important;
+      color: mat-contrast($dsh-light-primary, 500);
+    }
+  }
 }

@@ -5,6 +5,9 @@ import { CommonModule } from '@angular/common';
 
 import { DashboardRoutingModule } from './dashboard-routing.module';
 
+// * Echarts
+import { NgxEchartsModule } from 'ngx-echarts';
+
 // * Components
 import { DashboardComponent } from './dashboard.component';
 import { AnalyticsComponent } from './analytics/analytics.component';
@@ -12,6 +15,7 @@ import { ProjectsComponent } from './projects/projects.component';
 import { OverlayContainer } from '@angular/cdk/overlay';
 import { CardNumberComponent } from './analytics/card-number/card-number.component';
 import { CardDateComponent } from './analytics/card-date/card-date.component';
+import { LineChartComponent } from './analytics/line-chart/line-chart.component';
 
 
 @NgModule({
@@ -20,13 +24,15 @@ import { CardDateComponent } from './analytics/card-date/card-date.component';
     AnalyticsComponent,
     ProjectsComponent,
     CardNumberComponent,
-    CardDateComponent
+    CardDateComponent,
+    LineChartComponent
   ],
   imports: [
     CommonModule,
     DashboardRoutingModule,
     SharedModule,
-    MaterialModule
+    MaterialModule,
+    NgxEchartsModule
   ]
 })
 export class DashboardModule {

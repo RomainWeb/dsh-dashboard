@@ -1,0 +1,12 @@
+@import '~@angular/material/theming';
+
+@mixin mat-custom-toolbar-theme($theme) {
+  $accent: map-get($theme, accent);
+  $primary: map-get($theme, primary );
+  $background: map-get($theme, background);
+  $foreground: map-get($theme, foreground);
+
+  mat-toolbar {
+    
+  }
+}
