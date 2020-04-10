@@ -1,5 +1,6 @@
+import { MatSidenav } from '@angular/material/sidenav';
 import { AppState } from 'src/app/+state/index';
-import { Component, OnInit, AfterViewInit } from '@angular/core';
+import { Component, OnInit, AfterViewInit, ViewChild } from '@angular/core';
 import { Observable } from 'rxjs';
 import { Store } from '@ngrx/store';
 import * as fromUiSelectors from 'src/app/+state/ui/selectors';
@@ -12,9 +13,12 @@ import { delay } from 'rxjs/operators';
   styleUrls: ['./card-donut.component.scss']
 })
 export class CardDonutComponent implements OnInit, AfterViewInit {
+  @ViewChild('donutSidenav') donutSidenav: MatSidenav;
   options: any;
   theme$: Observable<string>;
   isLoading = true;
+  echartsInstance: any;
+  donutSelected: any;
 
   constructor(
     private store: Store<AppState>
@@ -70,5 +74,16 @@ export class CardDonutComponent implements OnInit, AfterViewInit {
           }
       ]
     };
+  }
+
+  onChartInit(e: any) {
+    this.echartsInstance = e;
+    console.log('on chart init:', e);
+  }
+
+  onChartClick(e: any) {
+    console.log('on chart click:', e);
+    this.donutSidenav.open();
+    this.donutSelected = e.data;
   }
 }

@@ -1,0 +1,9 @@
+@import '~@angular/material/theming';
+
+@mixin dsh-loader-component-theme($theme) {
+  $foreground: map-get($theme, foreground);
+
+  svg {
+    fill: mat-color($foreground, icon) !important;
+  }
+}

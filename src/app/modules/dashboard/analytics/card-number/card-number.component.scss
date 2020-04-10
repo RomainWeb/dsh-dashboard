@@ -1,37 +1,33 @@
 :host {
-    mat-card {
-        padding: 0 !important;
-        height: 80px;
-        overflow: hidden;
-        margin-bottom: 1rem;
+  mat-card {
+    padding: 0 !important;
+    height: 80px;
+    overflow: hidden;
+    margin-bottom: 1rem;
 
-        mat-card-content {
-            .icon {
-                margin: 1rem 2rem;
-                width: 45px;
-                text-align: center;
-            }
+    mat-card-content {
+      .icon {
+        margin: 1rem 2rem;
+        width: 45px;
+        text-align: center;
+      }
 
-            .loader {
-                margin-top: 5px;
+      .loader {
+        margin-top: 5px;
+      }
 
-                fa-icon {
-                    font-size: 20px;
-                }
-            }
+      .content {
+        padding: 1rem;
 
-            .content {
-                padding: 1rem;
-
-                .title{
-                    opacity: 0.68;
-                }
-                
-                .number {
-                    font-size: 1.375rem;
-                    margin-top: 0.5rem;
-                }
-            }
+        .title{
+          opacity: 0.68;
         }
+          
+        .number {
+          font-size: 1.375rem;
+          margin-top: 0.5rem;
+        }
+      }
     }
+  }
 }

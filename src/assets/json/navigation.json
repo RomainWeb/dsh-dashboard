@@ -1,23 +1,12 @@
 [
-    {
-        "title": "Main navigation",
-        "items": [
-            { "title": "Analytics", "icon": "chart-line", "route": "/dashboard/analytics" },
-            { "title": "Project", "icon": "tachometer", "route": "/dashboard/projects" }
-        ]
-    },
-    {
-        "title": "Features",
-        "items": [
-            { 
-                "title": "Forms", 
-                "icon": "edit", 
-                "items": [
-                    { "title": "Inputs", "route": "." },
-                    { "title": "Layout", "route": "." },
-                    { "title": "Buttons", "route": "." }
-                ]
-            }
-        ]
-    }
+  {
+    "title": "Main navigation",
+    "items": [
+      {
+        "title": "Analytics",
+        "icon": "chart-line",
+        "route": "/dashboard/analytics"
+      }
+    ]
+  }
 ]

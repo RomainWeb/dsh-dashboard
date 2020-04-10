@@ -15,7 +15,7 @@ import { ProjectsComponent } from './projects/projects.component';
 import { OverlayContainer } from '@angular/cdk/overlay';
 import { CardNumberComponent } from './analytics/card-number/card-number.component';
 import { CardDateComponent } from './analytics/card-date/card-date.component';
-import { LineChartComponent } from './analytics/line-chart/line-chart.component';
+import { CardLineChartComponent } from './analytics/card-line-chart/card-line-chart.component';
 import { CardWeatherComponent } from './analytics/card-weather/card-weather.component';
 import { CardDonutComponent } from './analytics/card-donut/card-donut.component';
 import { CardBarComponent } from './analytics/card-bar/card-bar.component';
@@ -28,7 +28,7 @@ import { CardBarComponent } from './analytics/card-bar/card-bar.component';
     ProjectsComponent,
     CardNumberComponent,
     CardDateComponent,
-    LineChartComponent,
+    CardLineChartComponent,
     CardWeatherComponent,
     CardDonutComponent,
     CardBarComponent,

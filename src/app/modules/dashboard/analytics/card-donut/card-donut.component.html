@@ -1,16 +1,27 @@
 <mat-card class="hoverable">
 	<mat-card-header>
-		<mat-card-title><span class="strong">Drinks rate</span> based on 3 months data</mat-card-title>
+		<mat-card-title><span class="strong">Soda consumption percent</span> based on 3 months data</mat-card-title>
 	</mat-card-header>
 	<mat-divider>
 	</mat-divider>
-	<mat-card-content fxLayout="column" fxLayoutAlign="center stretch">
-			<div class="loader" *ngIf="isLoading">
-					<fa-icon size="5x" [icon]="['fal', 'spinner']" [spin]="true"></fa-icon>
+	<mat-card-content>
+		<mat-drawer-container>
+			<mat-drawer class="donut-detail-content" #donutSidenav mode="over" position="end">
+				<div *ngIf="donutSelected">
+					<p>{{ donutSelected.name }}</p>
+				</div>
+			</mat-drawer>
+			<mat-drawer-content fxLayout="column" fxLayoutAlign="center stretch">
+				<div class="loader" *ngIf="isLoading">
+					<dsh-loader></dsh-loader>
 					<h4>Loading datas...</h4>
-			</div>
-			<div *ngIf="!isLoading">
-					<div echarts [options]="options" [theme]="theme$ | async"></div>
-			</div>
+				</div>
+				<div *ngIf="!isLoading">
+					<div echarts (chartInit)="onChartInit($event)" (chartClick)="onChartClick($event)" [options]="options"
+						[theme]="theme$ | async">
+					</div>
+				</div>
+			</mat-drawer-content>
+		</mat-drawer-container>
 	</mat-card-content>
 </mat-card>

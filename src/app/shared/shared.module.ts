@@ -2,9 +2,12 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { IconsModule } from './icons.module';
+import { LoaderComponent } from './components/loader/loader.component';
 
 @NgModule({
-  declarations: [],
+  declarations: [
+    LoaderComponent
+  ],
   imports: [
     CommonModule,
     FlexLayoutModule,
@@ -12,7 +15,9 @@ import { IconsModule } from './icons.module';
   ],
   exports: [
     FlexLayoutModule,
-    IconsModule
+    IconsModule,
+    // Components
+    LoaderComponent
   ]
 })
 export class SharedModule { }
