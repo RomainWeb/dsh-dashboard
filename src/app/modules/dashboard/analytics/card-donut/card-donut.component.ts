@@ -78,11 +78,9 @@ export class CardDonutComponent implements OnInit, AfterViewInit {
 
   onChartInit(e: any) {
     this.echartsInstance = e;
-    console.log('on chart init:', e);
   }
 
   onChartClick(e: any) {
-    console.log('on chart click:', e);
     this.donutSidenav.open();
     this.donutSelected = e.data;
   }

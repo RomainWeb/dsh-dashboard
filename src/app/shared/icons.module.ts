@@ -16,7 +16,8 @@ import {
   faCloudMoonRain,
   faCloudSun,
   faThunderstormSun,
-  faSun
+  faSun,
+  faTimes
 } from '@fortawesome/pro-light-svg-icons';
 
 @NgModule({
@@ -34,7 +35,7 @@ export class IconsModule {
       faChartLine, faTachometer, faEdit, faCog, faCloudUpload,
       faComments, faChartNetwork, faBell, faSpinner, faHeart,
       faMapPin, faCloudMoonRain, faCloudSun, faThunderstormSun,
-      faSun
+      faSun, faTimes
     )
   }
 }

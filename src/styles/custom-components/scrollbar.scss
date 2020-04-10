@@ -1,0 +1,28 @@
+@import '~@angular/material/theming';
+
+@mixin mat-custom-scrollbar-theme($theme) {
+  $accent: map-get($theme, accent);
+  $primary: map-get($theme, primary );
+  $background: map-get($theme, background);
+  $foreground: map-get($theme, foreground);
+
+  ::-webkit-scrollbar-track
+  {
+      background-color: mat-color($background);
+      border-radius: 0px;
+  }
+
+  ::-webkit-scrollbar
+  {
+      width: 0.5rem;
+      height: 0.5rem;
+      background-color: mat-color($background);
+      border-radius: 0px;
+  }
+
+  ::-webkit-scrollbar-thumb
+  {
+      background-color: mat-color($primary, darker);
+      border-radius: 0px;
+  }
+}

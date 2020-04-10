@@ -28,7 +28,7 @@ $dsh-dark-theme: mat-dark-theme(
     }
 
     .donut-detail-content {
-      background-color: rgba(21, 26, 48, 0.68);
+      background-color: mat-color($dsh-dark-primary);
       color: #FFF;
     }
   }

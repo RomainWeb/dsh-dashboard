@@ -19,6 +19,9 @@
   mat-drawer-container { 
     background-color: inherit !important;
     height: 100%;
-  }
 
+    mat-drawer {
+      min-width: 50%;
+    }
+  }
 }

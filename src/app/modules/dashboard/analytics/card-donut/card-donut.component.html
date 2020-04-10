@@ -7,9 +7,7 @@
 	<mat-card-content>
 		<mat-drawer-container>
 			<mat-drawer class="donut-detail-content" #donutSidenav mode="over" position="end">
-				<div *ngIf="donutSelected">
-					<p>{{ donutSelected.name }}</p>
-				</div>
+				<dsh-card-donut-detail [name]="donutSelected?.name"></dsh-card-donut-detail>
 			</mat-drawer>
 			<mat-drawer-content fxLayout="column" fxLayoutAlign="center stretch">
 				<div class="loader" *ngIf="isLoading">

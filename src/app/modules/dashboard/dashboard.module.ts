@@ -19,6 +19,7 @@ import { CardLineChartComponent } from './analytics/card-line-chart/card-line-ch
 import { CardWeatherComponent } from './analytics/card-weather/card-weather.component';
 import { CardDonutComponent } from './analytics/card-donut/card-donut.component';
 import { CardBarComponent } from './analytics/card-bar/card-bar.component';
+import { CardDonutDetailComponent } from './analytics/card-donut/card-donut-detail/card-donut-detail.component';
 
 
 @NgModule({
@@ -32,6 +33,7 @@ import { CardBarComponent } from './analytics/card-bar/card-bar.component';
     CardWeatherComponent,
     CardDonutComponent,
     CardBarComponent,
+    CardDonutDetailComponent,
   ],
   imports: [
     CommonModule,

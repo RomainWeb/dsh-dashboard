@@ -1,0 +1,15 @@
+<div class="title-content" fxLayout="row">
+  <span>Evolution of {{ name }}</span>
+  <span fxFlex></span>
+  <span>
+    <button mat-icon-button type="button">
+      <fa-icon [icon]="['fal', 'times']"></fa-icon>
+    </button>
+  </span>
+</div>
+<div 
+  echarts 
+  (chartInit)="onChartInit($event)" 
+  [options]="options"
+  [theme]="theme$ | async">
+</div>
