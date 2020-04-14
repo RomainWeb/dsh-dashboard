@@ -11,6 +11,12 @@
 
   mat-card {
 
+    mat-card-title {
+      fa-icon {
+        margin-right: 1rem;
+      }
+    }
+
     mat-card-content {
       height: 450px;
     }

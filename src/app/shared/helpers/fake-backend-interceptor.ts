@@ -5,10 +5,10 @@ import { Observable, of, throwError } from 'rxjs';
 import { mergeMap, materialize, delay, dematerialize } from 'rxjs/operators';
 
 const cardNumberList: any[] = [
-    { id: 1,  number: 1234 },
-    { id: 2,  number: 6574 },
-    { id: 3,  number: 34 },
-    { id: 4,  number: 1035531 },
+    { id: 1,  number: 1234, currency: '', isNegative: false },
+    { id: 2,  number: 425, currency: 'ppm', isNegative: true },
+    { id: 3,  number: 15430, currency: '', isNegative: true },
+    { id: 4,  number: 0.5, currency: '°C', isNegative: false },
 ];
 
 // array in local storage for registered users

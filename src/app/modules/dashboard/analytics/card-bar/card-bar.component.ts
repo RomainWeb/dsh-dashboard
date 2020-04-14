@@ -4,6 +4,7 @@ import { Store } from '@ngrx/store';
 import { Observable } from 'rxjs';
 import * as fromUiSelectors from 'src/app/+state/ui/selectors';
 import { delay } from 'rxjs/operators';
+import { OPTIONS } from './chart-options';
 
 @Component({
   selector: 'dsh-card-bar',
@@ -30,48 +31,6 @@ export class CardBarComponent implements OnInit, AfterViewInit {
     }, 1000);
 
 
-    this.options = {
-      tooltip: {
-        trigger: 'item',
-        formatter: '{a} <br/>{b}: {c}'
-      },
-      legend: {
-        orient: 'horizontal',
-        data: ['Coka', 'Fanta', 'Orangina', 'Dr Pepper', 'Sprite'],
-        align: 'auto'
-      },
-      xAxis: {
-        type: 'category',
-        data: ['Feb', 'Mar', 'Apr']
-      },
-      yAxis: {
-        type: 'value'
-      },
-      series: [{
-        data: [120, 200, 567],
-        name: 'Coka',
-        type: 'bar'
-      },
-      {
-        data: [23, 35, 65],
-        name: 'Fanta',
-        type: 'bar'
-      },
-      {
-        data: [2, 12, 43],
-        name: 'Oragina',
-        type: 'bar'
-      },
-      {
-        data: [456, 678, 873],
-        name: 'Dr Pepper',
-        type: 'bar'
-      },
-      {
-        data: [456, 432, 435],
-        name: 'Sprite',
-        type: 'bar'
-      }],
-    };
+    this.options = OPTIONS;
   }
 }

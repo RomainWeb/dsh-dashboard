@@ -15,30 +15,30 @@ export class AnalyticsComponent implements OnInit, OnDestroy {
   cardNumberList: CardNumber[] = [
     {
       id: 1,
-      icon: 'cloud-upload',
+      icon: 'charging-station',
       route: '.',
-      title: 'Uploads',
+      title: 'Electric cars',
       color: '#5c6bc0'
     },
     {
       id: 2,
-      icon: 'comments',
+      icon: 'smog',
       route: '.',
-      title: 'Comments',
+      title: 'Co2 emmission',
       color: '#29b6f6'
     },
     {
       id: 3,
-      icon: 'chart-network',
+      icon: 'leaf-heart',
       route: '.',
-      title: 'Incomes',
+      title: 'Vegetation',
       color: '#ab47bc'
     },
     {
       id: 4,
-      icon: 'heart',
+      icon: 'temperature-hot',
       route: '.',
-      title: 'Likes',
+      title: 'Temperature anomally',
       color: '#ff9800'
     }
   ];

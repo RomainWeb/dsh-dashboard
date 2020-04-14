@@ -12,7 +12,12 @@
         <dsh-loader width="20" height="20"></dsh-loader>
       </div>
       <div [@leftToRight] class="number" *ngIf="!isLoading">
-        {{ cardResult.number }}
+        <span *ngIf="!cardResult.isNegative"> + </span>
+        <span *ngIf="cardResult.isNegative"> - </span>
+        {{ cardResult.number }} 
+        <span class="currency" *ngIf="cardResult.currency"> 
+          {{ cardResult.currency }}
+        </span>
       </div>
     </div>
   </mat-card-content>

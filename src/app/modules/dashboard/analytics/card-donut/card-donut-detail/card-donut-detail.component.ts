@@ -23,7 +23,7 @@ export class CardDonutDetailComponent implements OnInit {
     { day: 'Tuesday', value: 324, percent: 3.5, isPositive: true },
     { day: 'Wednesday', value: 642, percent: 7.4, isPositive: true },
     { day: 'Thursday', value: 432, percent: 5.6, isPositive: false },
-    { day: 'Friday', value: 2134, percent: 10.5, isPositive: true },
+    { day: 'Friday', value: 234, percent: 2.5, isPositive: true },
     { day: 'Saturday', value: 874, percent: 8.3, isPositive: true },
     { day: 'Sunday', value: 134, percent: 2.9, isPositive: false },
   ]

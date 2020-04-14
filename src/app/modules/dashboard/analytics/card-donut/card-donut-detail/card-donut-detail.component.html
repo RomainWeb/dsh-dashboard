@@ -1,5 +1,5 @@
 <div class="title-content" fxLayout="row" fxLayoutAlign="start center">
-  <span class="title">Sales trend of {{ name }} for next days</span>
+  <span class="title">The {{ name }} prevision for next days</span>
   <span fxFlex></span>
   <span>
     <button (click)="closeSidenav()" mat-icon-button type="button">
@@ -15,7 +15,7 @@
       <span fxFlex class="day">{{ item.day }}</span>
       <span fxFlex class="number"><span *ngIf="!item.isPositive"> - </span> {{ item.value }}</span>
       <span fxFlex class="trend">
-        <span> <span *ngIf="!item.isPositive"> - </span> {{ item.value }}% </span>
+        <span> <span *ngIf="!item.isPositive"> - </span> {{ item.percent }}% </span>
         <span>
           <fa-icon 
             [ngClass]="{'up': item.isPositive, 'down': !item.isPositive}"

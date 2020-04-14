@@ -1,13 +1,16 @@
-import { format, subWeeks } from 'date-fns';
+import { format, subWeeks, subYears } from 'date-fns';
+import { reverse } from 'lodash';
 
 const xAxisData = [];
-const sugar = [];
-const noSugar = [];
+const emea = [];
+const apac = [];
+const noram = [];
 
-for (let i = 0; i < 20; i++) {
-  xAxisData.push(format(subWeeks(new Date(), i), 'LLL dd yyyy'));
-  sugar.push(Math.floor(Math.random() * (80 - 40) + (40 + i)));
-  noSugar.push(Math.floor(Math.random() * (40 - 0) + (0 + i)));
+for (let i = 0; i < 10; i++) {
+  xAxisData.push(format(subYears(new Date(), i), 'yyyy'));
+  emea.push(Math.floor(Math.random() * (40 - 20) + (10 + i)));
+  apac.push(Math.floor(Math.random() * (40 - 20) + (10 + i)));
+  noram.push(Math.floor(Math.random() * (40 - 20) + (15 + i)));
 }
 
 export const OPTIONS = {
@@ -20,12 +23,12 @@ export const OPTIONS = {
   height: 'auto' ,
   },
   legend: {
-    data: ['With sugar', 'Without sugar'],
+    data: ['EMEA', 'APAC', 'NORAM'],
     align: 'left'
   },
   tooltip: {},
   xAxis: {
-    data: xAxisData,
+    data: reverse(xAxisData),
     silent: false,
     splitLine: {
       show: false
@@ -34,21 +37,33 @@ export const OPTIONS = {
   yAxis: {
   },
   series: [{
-    name: 'With sugar',
+    name: 'EMEA',
     type: 'line',
-    data: sugar,
+    data: emea,
     areaStyle: {},
-    smooth: true,
+    // smooth: true,
     animationEasing: 'quarticIn',
     animationDelay: (idx) => {
       return idx * 100;
     }
-  }, {
-    name: 'Without sugar',
+  },
+  {
+    name: 'APAC',
     type: 'line',
-    data: noSugar,
+    data: apac,
     areaStyle: {},
-    smooth: true,
+    // smooth: true,
+    animationEasing: 'quarticIn',
+    animationDelay: (idx) => {
+      return idx * 100 + 50;
+    }
+  },
+  {
+    name: 'NORAM',
+    type: 'line',
+    data: noram,
+    areaStyle: {},
+    // smooth: true,
     animationEasing: 'quarticIn',
     animationDelay: (idx) => {
       return idx * 100 + 50;

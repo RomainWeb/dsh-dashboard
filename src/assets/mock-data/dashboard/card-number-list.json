@@ -1,18 +1,22 @@
 [
     { 
         "id": 1,
-        "number": 1234
+        "number": 1234,
+        "currency": ""
     },
     { 
         "id": 2,
-        "number": 122315
+        "number": 425,
+        "currency": "ppm"
     },
     { 
         "id": 3,
-        "number": 12
+        "number": 12,
+        "currency": ""
     },
     { 
         "id": 4,
-        "number": 99
+        "number": 99,
+        "currency": ""
     }
 ]

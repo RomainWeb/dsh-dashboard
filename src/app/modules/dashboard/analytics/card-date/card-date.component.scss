@@ -2,6 +2,16 @@
 
     mat-card {
         
+        mat-card-header {
+
+            mat-card-title {
+      
+              fa-icon {
+                margin-right: 0.5rem;
+              }
+            }
+        }
+
         mat-card-content {
             padding: 2rem 0;
 

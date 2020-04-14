@@ -5,6 +5,7 @@ import { Observable } from 'rxjs';
 import { Store } from '@ngrx/store';
 import * as fromUiSelectors from 'src/app/+state/ui/selectors';
 import { delay } from 'rxjs/operators';
+import { OPTIONS } from './chart-options';
 
 
 @Component({
@@ -34,46 +35,7 @@ export class CardDonutComponent implements OnInit, AfterViewInit {
       this.isLoading = false;
     }, 3000);
 
-    this.options = {
-      tooltip: {
-          trigger: 'item',
-          formatter: '{a} <br/>{b}: {c} ({d}%)'
-      },
-      legend: {
-          orient: 'vertical',
-          left: 10,
-          data: ['Coka', 'Fanta', 'Orangina', 'Dr Pepper', 'Sprite']
-      },
-      series: [
-          {
-              name: 'Drink rate',
-              type: 'pie',
-              radius: ['50%', '70%'],
-              avoidLabelOverlap: false,
-              label: {
-                  show: false,
-                  position: 'center'
-              },
-              emphasis: {
-                  label: {
-                      show: true,
-                      fontSize: '30',
-                      fontWeight: 'bold'
-                  }
-              },
-              labelLine: {
-                  show: false
-              },
-              data: [
-                  {value: 1234, name: 'Coka'},
-                  {value: 310, name: 'Fanta'},
-                  {value: 234, name: 'Orangina'},
-                  {value: 135, name: 'Dr Pepper'},
-                  {value: 65, name: 'Sprite'}
-              ]
-          }
-      ]
-    };
+    this.options = OPTIONS;
   }
 
   onChartInit(e: any) {

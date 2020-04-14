@@ -1,7 +1,10 @@
 <mat-card class="hoverable">
 	<mat-card-header>
 		<mat-card-title>
-			<mat-card-title>{{ currentTime | date:'EEEE hh:mm:ss aa' }}</mat-card-title>
+			<mat-card-title>
+				<fa-icon size="sm" [icon]="['fal', 'calendar-day']"></fa-icon>
+				{{ currentTime | date:'EEEE hh:mm:ss aa' }}
+			</mat-card-title>
 		</mat-card-title>
 	</mat-card-header>
 	<mat-card-content fxLayout="column" fxLayoutAlign="center center" fxLayoutGap="1.5rem">

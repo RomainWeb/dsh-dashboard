@@ -11,6 +11,12 @@
 
   mat-card {
 
+    mat-card-title {
+      fa-icon {
+        margin-right: 1rem;
+      }
+    }
+
     mat-card-content {
       height: 450px;
     }
@@ -23,5 +29,11 @@
     mat-drawer {
       min-width: 50%;
     }
+  }
+
+  .instruction {
+    font-size: 0.675rem;
+    opacity: 0.48;
+    padding-left: 1rem;
   }
 }

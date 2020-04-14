@@ -24,8 +24,13 @@
         }
           
         .number {
-          font-size: 1.375rem;
+          font-size: 1.825rem;
           margin-top: 0.5rem;
+          
+          .currency {
+            font-size: 0.875rem;
+            opacity: 0.68;
+          }
         }
       }
     }

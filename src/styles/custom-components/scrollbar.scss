@@ -8,7 +8,7 @@
 
   ::-webkit-scrollbar-track
   {
-      background-color: mat-color($background);
+      background-color: mat-color($background, unselected-chip);
       border-radius: 0px;
   }
 
@@ -16,13 +16,12 @@
   {
       width: 0.5rem;
       height: 0.5rem;
-      background-color: mat-color($background);
+      background-color: mat-color($background, unselected-chip);
       border-radius: 0px;
   }
 
-  ::-webkit-scrollbar-thumb
-  {
-      background-color: mat-color($primary, darker);
-      border-radius: 0px;
+  ::-webkit-scrollbar-thumb {
+    background-color: mat-color($foreground, disabled-button) !important;
+    border-radius: 0px;
   }
 }
