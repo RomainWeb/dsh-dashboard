@@ -1,0 +1,104 @@
+<form autocomplete="off" [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+  <div 
+    class="login-container" 
+    fxLayout="column">
+    <div class="btn-back">
+      <button mat-icon-button type="button" [routerLink]="[ '/']">
+        <fa-icon size="3x" [icon]="['fal', 'arrow-circle-left']"></fa-icon>
+      </button>
+    </div>
+    <div fxLayout="row" fxLayoutAlign="start stretch">
+      <div fxFlex class="login-intro-wrapper" fxLayout="row" fxLayoutAlign="center center">
+        <div class="login-intro-title mat-elevation-z12">
+          <div class="logos" fxLayout="row" fxLayoutGap="1rem">
+            <span><img src="/assets/img/logo-angular.png" alt="logo Angular"></span>
+            <span><img src="/assets/img/logo-material.png" alt="logo Material"></span>
+            <span><img src="/assets/img/logo-ngrx.svg" alt="logo NGRX"></span>
+          </div>
+          <h1>YOUR DASHBOARD</h1>
+          <h3>Welcome,</h3>
+          <p>Ipsam vero urbem Byzantiorum fuisse refertissimam atque ornatissimam signis quis ignorat?</p>
+          <p>Quae illi, exhausti sumptibus bellisque maximis, cum omnis Mithridaticos impetus totumque Pontum armatum affervescentem in Asiam atque erumpentem</p>
+          <p>Ore repulsum et cervicibus interclusum suis sustinerent, tum, inquam, Byzantii et postea signa illa et reliqua urbis ornanemta sanctissime custodita tenuerunt.</p>
+        </div>
+      </div>
+      <div class="login-form-wrapper mat-elevation-z12">
+        <mat-card>
+          <mat-card-content fxLayout="column" fxLayoutAlign="center center" fxLayoutGap="1rem">
+            <div fxLayout="column" fxLayoutAlign="center center">
+              <h3>LOG IN WITH YOUR CREDENTIALS</h3>
+              <h5>Use your email account to enter </h5>
+            </div>
+            <mat-divider
+              [inset]="true">
+            </mat-divider>
+
+            <mat-form-field color="accent" appearance="outline">
+              <mat-label>Email</mat-label>
+              <input 
+                formControlName="email"
+                required 
+                matInput 
+                placeholder="Enter your email">
+              <fa-icon matSuffix size="lg" [icon]="['fal', 'envelope']"></fa-icon>
+              <mat-error>
+                Email is required
+              </mat-error>
+            </mat-form-field>
+
+            <mat-form-field color="accent" appearance="outline">
+              <mat-label>Password</mat-label>
+              <input 
+                formControlName="password"
+                required 
+                type="password" 
+                matInput 
+                placeholder="Enter your password">
+              <fa-icon matSuffix size="lg" [icon]="['fal', 'key']"></fa-icon>
+              <mat-error>
+                Password is required
+              </mat-error>
+            </mat-form-field>
+
+            <div style="width: 100%;" fxLayout="row">
+
+              <mat-checkbox formControlName="rememberMe">Remember me</mat-checkbox>
+
+              <span fxFlex></span>
+              <a href=".">Forget Password?</a>
+            </div>
+
+            <button 
+              class="btn-submit"
+              [disabled]="!loginForm.valid"
+              mat-raised-button 
+              type="submit" 
+              color="accent">
+              LOG IN
+            </button>
+
+            <div style="height: 20px;">
+              <mat-error [hidden]="!requestError">{{ requestError?.error.message }}</mat-error>
+            </div>
+
+            <mat-divider
+              [inset]="true">
+            </mat-divider>
+            <div class="other-connection">
+              <span>Or enter with:</span>
+            </div>
+            <div class="brands-logo" fxLayout="row" fxLayoutGap="1rem">
+              <fa-icon class="facebook" matSuffix size="lg" [icon]="['fab', 'facebook']"></fa-icon>
+              <fa-icon class="google" matSuffix size="lg" [icon]="['fab', 'google-plus']"></fa-icon>
+              <fa-icon class="twitter" matSuffix size="lg" [icon]="['fab', 'twitter']"></fa-icon>
+              <fa-icon class="github" matSuffix size="lg" [icon]="['fab', 'github']"></fa-icon>
+            </div>
+            <div class="register">
+              <p>Don't have an account? <a href=".">Register</a></p>
+            </div>
+          </mat-card-content>
+        </mat-card>
+      </div>
+    </div>
+  </div>
+</form>

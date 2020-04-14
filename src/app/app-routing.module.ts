@@ -11,6 +11,12 @@ const routes: Routes = [
     data: { state: 'dashboard' },
   },
   {
+    path: 'pages',
+    loadChildren: () => import('./modules/pages/pages.module')
+    .then(m => m.PagesModule),
+    data: { state: 'pages' },
+  },
+  {
     path: 'static',
     loadChildren: () => import('./modules/static/static.module')
     .then(m => m.StaticModule),

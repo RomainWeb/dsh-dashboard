@@ -1,6 +1,41 @@
+@import '../../../../../../styles/custom-variables';
+
 :host {
 
   .title-content {
     padding: 1rem;
+
+    .title {
+      font-size: 1.125rem;
+      font-weight: 500;
+    }
+  }
+
+  .trend-content {
+    margin-top: 0.5rem;
+
+    .day-wrapper {
+      padding: 0 0.5rem;
+
+      .number {
+        text-align: right;
+      }
+    }
+
+    .trend {
+      text-align: right;
+
+      fa-icon {
+        margin-left: 0.5rem;
+  
+        &.up {
+          color: $green;
+        }
+  
+        &.down {
+          color: $red;
+        }
+      }
+    }
   }
 }

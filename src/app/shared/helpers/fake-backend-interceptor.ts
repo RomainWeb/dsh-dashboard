@@ -9,12 +9,22 @@ const cardNumberList: any[] = [
     { id: 2,  number: 6574 },
     { id: 3,  number: 34 },
     { id: 4,  number: 1035531 },
-]
+];
+
+// array in local storage for registered users
+const users = [
+    {
+        id: 1,
+        email: 'moi@chezmoi.com',
+        password: '123456',
+        firstName: 'romain',
+        lastName: 'web'
+    }
+];
 
 @Injectable()
 export class FakeBackendInterceptor implements HttpInterceptor {
     intercept(request: HttpRequest<any>, next: HttpHandler): Observable<HttpEvent<any>> {
-
         const { url, method, headers, body } = request;
 
         // wrap in delayed observable to simulate server api call
@@ -26,6 +36,8 @@ export class FakeBackendInterceptor implements HttpInterceptor {
 
         function handleRoute() {
             switch (true) {
+                case url.endsWith('/api/login') && method === 'POST':
+                    return login();
                 case url.match(/\/card-number\/\d+$/) && method === 'GET':
                     return getCardNumberById();
                 default:
@@ -41,10 +53,32 @@ export class FakeBackendInterceptor implements HttpInterceptor {
             return ok(user);
         }
 
+        //#region LOGIN
+        function login() {
+            const { email, password, rememberMe } = body;
+            const user = users.find(x => x.email === email && x.password === password);
+            if (!user) {
+                return error('Email or password is incorrect');
+            }
+            return ok({
+                id: user.id,
+                username: user.email,
+                firstName: user.firstName,
+                lastName: user.lastName,
+                token: 'fake-jwt-token'
+            })
+        }
+        //#endregion
+
         // helper functions
 
+        // tslint:disable-next-line: no-shadowed-variable
         function ok(body?: any) {
             return of(new HttpResponse({ status: 200, body }));
+        }
+
+        function error(message) {
+            return throwError({ error: { message } });
         }
 
         function idFromUrl() {

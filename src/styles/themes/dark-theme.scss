@@ -1,7 +1,7 @@
 @import '../palettes/dark-palette';
 
 $dsh-dark-primary: mat-palette($mat-dark-blue, 500, 300, 900);
-$dsh-dark-accent: mat-palette($mat-indigo, 700, A200, 900);
+$dsh-dark-accent: mat-palette($mat-light-blue, 500, A100, 900);
 
 // The warn palette is optional (defaults to red).
 $dsh-dark-warn: mat-palette($mat-red);
@@ -14,6 +14,14 @@ $dsh-dark-theme: mat-dark-theme(
 
 
 .dark-theme { 
+  a {
+    color: mat-color($dsh-dark-accent, 500);
+    text-decoration: none;
+
+    &:hover {
+      color: mat-color($dsh-dark-accent, lighter);
+    }
+  }
   
   // SIDENAV
   mat-sidenav-container {

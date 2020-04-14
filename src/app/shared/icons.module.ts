@@ -17,8 +17,17 @@ import {
   faCloudSun,
   faThunderstormSun,
   faSun,
-  faTimes
+  faTimes,
+  faAnalytics,
+  faUserLock,
+  faArrowCircleLeft,
+  faEnvelope,
+  faKey,
 } from '@fortawesome/pro-light-svg-icons';
+
+import { faFacebook, faGooglePlus, faTwitter, faGithub } from '@fortawesome/free-brands-svg-icons';
+
+import { faCaretUp as fasCaretUp, faCaretDown as fasCaretDown } from '@fortawesome/pro-solid-svg-icons';
 
 @NgModule({
   imports: [
@@ -35,7 +44,9 @@ export class IconsModule {
       faChartLine, faTachometer, faEdit, faCog, faCloudUpload,
       faComments, faChartNetwork, faBell, faSpinner, faHeart,
       faMapPin, faCloudMoonRain, faCloudSun, faThunderstormSun,
-      faSun, faTimes
+      faSun, faTimes, faAnalytics, fasCaretDown, fasCaretUp, faUserLock,
+      faArrowCircleLeft, faEnvelope, faKey, faFacebook, faGooglePlus,
+      faTwitter, faGithub
     )
   }
 }

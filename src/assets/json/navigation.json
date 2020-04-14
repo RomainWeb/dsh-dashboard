@@ -4,9 +4,25 @@
     "items": [
       {
         "title": "Analytics",
-        "icon": "chart-line",
+        "icon": "analytics",
         "route": "/dashboard/analytics"
       }
     ]
-  }
+  },
+  {
+    "title": "Pages",
+    "items": [
+        { 
+            "title": "Authentication", 
+            "icon": "user-lock", 
+            "route": "/pages",
+            "items": [
+                { "title": "Login", "route": "/login" },
+                { "title": "Register", "route": "." },
+                { "title": "Forgot password", "route": "." }
+            ]
+        }
+    ]
+}
+
 ]

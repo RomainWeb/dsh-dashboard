@@ -1,6 +1,5 @@
 import { createReducer, on } from '@ngrx/store';
 import * as fromActions from './actions';
-import { state } from '@angular/animations';
 
 export interface UiState {
     theme: string;

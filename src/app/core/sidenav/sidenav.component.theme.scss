@@ -16,12 +16,12 @@
 
             &.active {
                 fa-icon {
-                    color: mat-color($accent, lighter) !important;
+                    color: mat-color($accent) !important;
                     transition: color 0.3s linear;
                 }
 
                 .mat-list-item-ripple {
-                    border-left: mat-color($accent, lighter) 5px solid !important;
+                    border-left: mat-color($accent) 5px solid !important;
                     transition: border-width 0.3s linear !important;
                 }
             }

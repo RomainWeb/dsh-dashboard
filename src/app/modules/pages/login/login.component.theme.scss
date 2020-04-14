@@ -1,0 +1,45 @@
+@import '~@angular/material/theming';
+
+@mixin dsh-login-component-theme($theme) {
+  $accent: map-get($theme, accent);
+  $primary: map-get($theme, primary );
+  $background: map-get($theme, background);
+  $foreground: map-get($theme, foreground);
+
+
+  .btn-back {
+
+    fa-icon {
+      color: #FFF;
+    }
+  }
+
+  .login-intro-title {
+    background-color: mat-color($background, disabled-button) !important;
+    color: #FFF !important;
+  }
+
+  .brands-logo {
+    fa-icon {
+      cursor: pointer;
+      color: mat-color($background, disabled-button);
+      transition: color 0.5s ease;
+
+      &.facebook:hover {
+        color: #3b5998 !important;
+      }
+
+      &.google:hover {
+        color: #d34836 !important;
+      }
+
+      &.twitter:hover {
+        color: #1da1f2  !important;
+      }
+
+      &.github:hover {
+        color: #000  !important;
+      }
+    }
+  }
+}

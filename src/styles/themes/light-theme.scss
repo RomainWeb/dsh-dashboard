@@ -1,5 +1,5 @@
 $dsh-light-primary: mat-palette($mat-light-blue, 500, A100, 900);
-$dsh-light-accent: mat-palette($mat-purple, 500, A200, 900);
+$dsh-light-accent: mat-palette($mat-teal, 500, A200, 900);
 
 $dsh-light-warn: mat-palette($mat-red);
 
@@ -10,6 +10,14 @@ $dsh-light-theme: mat-light-theme(
 );
 
 .light-theme {
+  a {
+    color: mat-color($dsh-light-accent, 500);
+    text-decoration: none;
+
+    &:hover {
+      color: mat-color($dsh-light-accent, lighter);
+    }
+  }
 
 	mat-card {
 		background-color: #FFF !important;

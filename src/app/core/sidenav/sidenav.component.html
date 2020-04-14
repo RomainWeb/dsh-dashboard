@@ -9,7 +9,10 @@
     <ng-container *ngFor="let subMenu of navItem.items">
 
       <mat-nav-list *ngIf="!subMenu.items">
-        <a mat-list-item [routerLinkActive]="'active'" [routerLink]="[subMenu.route]">
+        <a 
+          mat-list-item 
+          [routerLinkActive]="'active'" 
+          [routerLink]="[subMenu.route]">
           <fa-icon [icon]="['fal', subMenu.icon]" size="lg"></fa-icon>
           <span>{{ subMenu.title }}</span>
         </a>
@@ -22,7 +25,12 @@
         </mat-expansion-panel-header>
 
         <mat-nav-list *ngFor="let subItem of subMenu.items">
-          <a mat-list-item [routerLink]="[subMenu.route + subItem.route]">{{ subItem.title }}</a>
+          <a 
+            mat-list-item
+            [routerLinkActive]="'active'" 
+            [routerLink]="[subMenu.route + subItem.route]">
+            {{ subItem.title }}
+          </a>
         </mat-nav-list>
 
       </mat-expansion-panel>

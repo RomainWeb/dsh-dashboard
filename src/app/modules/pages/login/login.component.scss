@@ -1,0 +1,75 @@
+:host ::ng-deep {
+
+  .btn-back {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+  }
+
+  .login-container {
+    height: 100vh;
+    background-image: url('/assets/img/login-background.jpg');
+    background-size: cover;
+    margin: -1rem;
+
+    .login-intro-wrapper {
+
+      .login-intro-title {
+        background-color: rgba(255, 255, 255, 0.08);
+        padding: 3rem;
+        margin: 3rem;
+
+        .logos { 
+          margin-bottom: 2rem;
+
+          img, svg {
+            height: 64px;
+          }
+        }
+
+        p {
+          opacity: 0.48;
+        }
+      }
+    }
+
+    .login-form-wrapper {
+
+      mat-card {
+        height: 100vh;
+        width: 450px;
+        border-radius: 0 !important;
+
+        mat-card-content {
+          padding: 3rem !important;
+          height: 100%;
+
+          .btn-submit {
+            width: 100%;
+          }
+
+          .register, .other-connection {
+            margin-top: 3rem;
+          }
+
+          h3 { 
+            margin: 0;
+          }
+
+          h5 { 
+            font-weight: 500;
+            opacity: 0.48;
+          }
+
+          mat-form-field { 
+            width: 100%;
+          }
+
+          .mat-form-field-appearance-outline .mat-form-field-suffix {
+            top: -3px !important;
+          }
+        }
+      }
+    }
+  }
+}

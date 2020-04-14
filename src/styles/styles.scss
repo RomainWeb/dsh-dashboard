@@ -11,6 +11,7 @@
 @import '../app/core/sidenav/sidenav.component.theme.scss';
 @import '../app/shared/components/loader/loader.component.theme.scss';
 @import './custom-components/scrollbar.scss';
+@import '../app/modules/pages/login/login.component.theme.scss';
 
 // Import custom Material theme
 @import './material-components/mat-menu-theme.scss';
@@ -27,6 +28,7 @@
   @include dsh-sidenav-component-theme($theme);
   @include dsh-loader-component-theme($theme);
   @include mat-custom-scrollbar-theme($theme);
+  @include dsh-login-component-theme($theme);
 
   // custom material
   @include mat-custom-menu-theme($theme);

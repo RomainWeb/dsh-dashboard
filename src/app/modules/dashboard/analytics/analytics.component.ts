@@ -1,8 +1,10 @@
 import { CardNumber } from './../../../shared/model/dashboard/card-number';
 import { DashboardService } from './../dashboard.service';
 import { Component, OnInit, OnDestroy } from '@angular/core';
-import { Observable, Subscriber, Subscription } from 'rxjs';
-import { tap } from 'rxjs/operators';
+import { Store } from '@ngrx/store';
+import { AppState } from 'src/app/+state';
+import * as fromUserActions from 'src/app/+state/user/actions';
+
 
 @Component({
   selector: 'dsh-analytics',
@@ -43,10 +45,12 @@ export class AnalyticsComponent implements OnInit, OnDestroy {
   isLoading = false;
 
   constructor(
-    private dashboardService: DashboardService
+    private dashboardService: DashboardService,
+    private store: Store<AppState>
   ) { }
 
   ngOnInit(): void {
+    this.store.dispatch(fromUserActions.changeIsLogging({ isLogging: true }));
   }
 
   ngOnDestroy(): void {

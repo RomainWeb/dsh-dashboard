@@ -1,15 +1,32 @@
-<div class="title-content" fxLayout="row">
-  <span>Evolution of {{ name }}</span>
+<div class="title-content" fxLayout="row" fxLayoutAlign="start center">
+  <span class="title">Sales trend of {{ name }} for next days</span>
   <span fxFlex></span>
   <span>
-    <button mat-icon-button type="button">
+    <button (click)="closeSidenav()" mat-icon-button type="button">
       <fa-icon [icon]="['fal', 'times']"></fa-icon>
     </button>
   </span>
 </div>
-<div 
-  echarts 
-  (chartInit)="onChartInit($event)" 
-  [options]="options"
-  [theme]="theme$ | async">
+<mat-divider>
+</mat-divider>
+<div class="trend-content" fxLayout="column" fxLayoutAlign="space-between stretch" fxLayoutGap="0.5rem">
+  <ng-container *ngFor="let item of dayDatas">
+    <div class="day-wrapper" fxLayout="row">
+      <span fxFlex class="day">{{ item.day }}</span>
+      <span fxFlex class="number"><span *ngIf="!item.isPositive"> - </span> {{ item.value }}</span>
+      <span fxFlex class="trend">
+        <span> <span *ngIf="!item.isPositive"> - </span> {{ item.value }}% </span>
+        <span>
+          <fa-icon 
+            [ngClass]="{'up': item.isPositive, 'down': !item.isPositive}"
+            size="lg" 
+            [icon]="['fas', item.isPositive ? 'caret-up' : 'caret-down']">
+          </fa-icon>
+        </span>
+      </span>
+    </div>
+    <mat-divider
+      [inset]="true">
+    </mat-divider>
+  </ng-container>
 </div>
