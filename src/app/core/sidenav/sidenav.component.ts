@@ -9,14 +9,42 @@ import { SidenavService } from './sidenav.service';
   styleUrls: ['./sidenav.component.scss']
 })
 export class SidenavComponent implements OnInit {
-  mainNavList$: Observable<Navigation>;
+  mainNavList: any = [
+    {
+      title: 'Main navigation',
+      items: [
+        {
+          title: 'Analytics',
+          icon: 'analytics',
+          route: '/dashboard/analytics'
+        }
+      ]
+    },
+    {
+      title: 'Pages',
+      items: [
+        {
+          title: 'Authentication',
+          icon: 'user-lock',
+          route: '/pages',
+          items: [
+            { title: 'Login', route: '/login' },
+            { title: 'Register', route: '.' },
+            { title: 'Forgot password', route: '.' },
+          ]
+        },
+        {
+          title: 'Chat',
+          icon: 'comments',
+          route: '/pages/chat'
+        }
+      ]
+    }
+  ];
 
-  constructor(
-    private sivenavService: SidenavService
-  ) { }
+  constructor() { }
 
   ngOnInit(): void {
-    this.mainNavList$ = this.sivenavService.getNavigationList();
   }
 
 }

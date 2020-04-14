@@ -1,0 +1,31 @@
+<mat-toolbar color="primary" fxLayout="column" fxLayoutGap="1rem">
+  <mat-toolbar-row fxLayout="row" fxLayoutAlign="start center">
+    <span fxFlex class="user-avatar">
+      <img src="/assets/img/avatar.png" alt="avatar">
+    </span>
+    <span>
+      <mat-menu #contactSettings="matMenu">
+        <button mat-menu-item>New group</button>
+        <button mat-menu-item>Profile</button>
+        <button mat-menu-item>Settings</button>
+        <button mat-menu-item>Disconnect</button>
+      </mat-menu>
+      
+      <button mat-icon-button [matMenuTriggerFor]="contactSettings">
+        <fa-icon size="lg" [icon]="['fal', 'ellipsis-v']"></fa-icon>
+      </button>
+    </span>
+  </mat-toolbar-row>
+
+  <mat-toolbar-row fxLayout="row" fxLayoutAlign="start center">
+    <mat-form-field color="accent" appearance="outline">
+      <input matInput placeholder="Search...">
+      <fa-icon matSuffix [icon]="['fal', 'search']"></fa-icon>
+    </mat-form-field>
+  </mat-toolbar-row>
+  
+</mat-toolbar>
+
+<div>
+  <dsh-contacts-list [chatList]="chatList$ | async"></dsh-contacts-list>
+</div>

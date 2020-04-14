@@ -8,9 +8,5 @@ import { Navigation } from 'src/app/shared/model/sidenav/navigation';
 })
 export class SidenavService {
 
-  constructor(private http: HttpClient) { }
-
-  getNavigationList(): Observable<Navigation> {
-    return this.http.get<Navigation>('/assets/json/navigation.json');
-  }
+  constructor() { }
 }

@@ -1,0 +1,14 @@
+:host {
+
+  .chat-container {
+    padding: 0.5rem;
+
+    .avatar {
+      height: 48px;
+      width: 48px;
+      border-radius: 50px;
+      background-position: center;
+      background-size: cover;
+    }
+  }
+}

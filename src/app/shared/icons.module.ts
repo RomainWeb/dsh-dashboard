@@ -30,6 +30,8 @@ import {
   faChargingStation,
   faLeafHeart,
   faTemperatureHot,
+  faEllipsisV,
+  faSearch,
 } from '@fortawesome/pro-light-svg-icons';
 
 import { faFacebook, faGooglePlus, faTwitter, faGithub } from '@fortawesome/free-brands-svg-icons';
@@ -54,7 +56,8 @@ export class IconsModule {
       faSun, faTimes, faAnalytics, fasCaretDown, fasCaretUp, faUserLock,
       faArrowCircleLeft, faEnvelope, faKey, faFacebook, faGooglePlus,
       faTwitter, faGithub, faTemperatureLow, faBolt, faSmog, faCalendarDay,
-      faChargingStation, faLeafHeart, faTemperatureHot
+      faChargingStation, faLeafHeart, faTemperatureHot, faComments, faEllipsisV,
+      faSearch
     )
   }
 }

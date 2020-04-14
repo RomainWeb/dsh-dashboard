@@ -1,0 +1,19 @@
+:host ::ng-deep{ 
+
+  .user-avatar {
+    img {
+      margin-top: 0.5rem;
+      height: 38px;
+      border-radius: 50%;
+    }
+  }
+
+  mat-form-field {
+    width: 100%;
+    font-size: 1rem;
+  }
+
+  .mat-form-field-appearance-outline .mat-form-field-infix {
+    border-top: 0 !important;
+  }
+}

@@ -8,10 +8,14 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { PagesRoutingModule } from './pages-routing.module';
 import { PagesComponent } from './pages.component';
 import { LoginComponent } from './login/login.component';
+import { ChatComponent } from './chat/chat.component';
+import { ContactsComponent } from './chat/contacts/contacts.component';
+import { ContactsListComponent } from './chat/contacts/contacts-list/contacts-list.component';
+import { ContactItemComponent } from './chat/contacts/contacts-list/contact-item/contact-item.component';
 
 
 @NgModule({
-  declarations: [PagesComponent, LoginComponent],
+  declarations: [PagesComponent, LoginComponent, ChatComponent, ContactsComponent, ContactsListComponent, ContactItemComponent],
   imports: [
     CommonModule,
     PagesRoutingModule,
