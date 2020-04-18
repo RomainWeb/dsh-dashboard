@@ -5,11 +5,13 @@
       "id": 1,
       "username": "username 1",
       "lastname": "lastname 1",
+      "firstname": "firstname 1",
       "avatar": "/assets/img/chat/avatars/avatar-0.jpg" 
     },
     "lastDate": "2020-04-14T20:12:22.848Z",
     "isRead": false,
-    "lastMessage": "Hierosolymis pari pari domitis natura aptae in aptae calentes locis."
+    "lastMessage": "Hierosolymis pari pari domitis natura aptae in aptae calentes locis.",
+    "unreadMessageCount": 6
   },
   {
     "id": 2,
@@ -17,11 +19,13 @@
       "id": 2,
       "username": "username 2",
       "lastname": "lastname 2",
+      "firstname": "firstname 2",
       "avatar": "/assets/img/chat/avatars/avatar-1.jpg" 
     },
     "lastDate": "2020-04-13T20:12:22.848Z",
     "isRead": false,
-    "lastMessage": "Quo offert est post ut."
+    "lastMessage": "Quo offert est post ut.",
+    "unreadMessageCount": 78
   },
   {
     "id": 3,
@@ -29,11 +33,13 @@
       "id": 3,
       "username": "username 3",
       "lastname": "lastname 3",
+      "firstname": "firstname 3",
       "avatar": "/assets/img/chat/avatars/avatar-2.jpg" 
     },
     "lastDate": "2020-04-10T20:12:22.848Z",
     "isRead": false,
-    "lastMessage": "Quibus exceptis sollemnium noxia vel aut vel qui plene intervallata."
+    "lastMessage": "Quibus exceptis sollemnium noxia vel aut vel qui plene intervallata.",
+    "unreadMessageCount": 0
   },
   {
     "id": 4,
@@ -41,11 +47,13 @@
       "id": 4,
       "username": "username 4",
       "lastname": "lastname 4",
+      "firstname": "firstname 4",
       "avatar": "/assets/img/chat/avatars/avatar-3.jpg" 
     },
     "lastDate": "2020-04-10T20:12:00.848Z",
     "isRead": false,
-    "lastMessage": "Esset inde iudex praedoctis permissi."
+    "lastMessage": "Esset inde iudex praedoctis permissi.",
+    "unreadMessageCount": 5
   },
   {
     "id": 5,
@@ -53,10 +61,12 @@
       "id": 5,
       "username": "username 5",
       "lastname": "lastname 5",
+      "firstname": "firstname 5",
       "avatar": "/assets/img/chat/avatars/avatar-4.jpg" 
     },
     "lastDate": "2020-04-03T20:12:00.848Z",
     "isRead": false,
-    "lastMessage": "Evitandum cadaveribus ferociens quod leo modum nihilo cadaveribus multa quae necem nihilo narrare leo scrutabatur."
+    "lastMessage": "Evitandum cadaveribus ferociens quod leo modum nihilo cadaveribus multa quae necem nihilo narrare leo scrutabatur.",
+    "unreadMessageCount": 2
   }
 ]

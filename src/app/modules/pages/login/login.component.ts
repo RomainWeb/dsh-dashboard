@@ -1,4 +1,3 @@
-import { HttpResponse } from '@angular/common/http';
 import { LoginService } from './login.service';
 import { AppState } from './../../../+state/index';
 import { Store } from '@ngrx/store';
@@ -29,6 +28,7 @@ export class LoginComponent implements OnInit {
     this.passwordCtrl = new FormControl(null, [Validators.required]);
     this.rememberMeCtrl = new FormControl(false);
 
+    // * Construct form builder
     this.loginForm = this.formBuilder.group({
       email: this.emailCtrl,
       password: this.passwordCtrl,
@@ -37,6 +37,7 @@ export class LoginComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    // * force the user to be not logging in the store
     this.store.dispatch(fromUserActions.changeIsLogging({ isLogging: false }));
   }
 
@@ -46,6 +47,7 @@ export class LoginComponent implements OnInit {
       const password = this.passwordCtrl.value;
       const rememberMe = this.rememberMeCtrl.value;
 
+      // * Call fake backend and return a User object
       this.loginService.login(email, password, rememberMe)
       .pipe(catchError((err) => {
         this.requestError = err;

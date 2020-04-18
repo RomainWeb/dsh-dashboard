@@ -1,5 +1,13 @@
-<div class="chat-container" fxLayout="row" fxLayoutAlign="start center">
-  <div class="avatar" [ngStyle]="{'background-image':'url('+ chatItem.user.avatar +')'}">
-    
+<div class="chat-container" fxLayout="row" fxLayoutAlign="start center" fxLayoutGap="1rem">
+  <div fxFlex="48px" class="avatar" [ngStyle]="{'background-image':'url('+ chatItem.user.avatar +')'}"></div>
+  <div fxFlex fxLayout="column">
+    <span class="username">{{ chatItem.user.firstname }} {{ chatItem.user.lastname }}</span>
+    <span class="last-message">{{ chatItem.lastMessage }}</span>
+  </div>
+  <div fxFlexAlign="start" class="informations" fxLayout="column" fxLayoutAlign="space-between end">
+    <span class="date-message">Apr 13 2020, 9:34 am</span>
+    <span *ngIf="chatItem.unreadMessageCount" class="unread-message-count">{{ chatItem.unreadMessageCount }}</span>
   </div>
 </div>
+<mat-divider>
+</mat-divider>
