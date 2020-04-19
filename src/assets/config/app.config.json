@@ -1,5 +1,6 @@
 {
   "SERVER_API" : {
-    "ENDPOINT_API_LOGIN": "localhost:4200/api/login"
+    "ENDPOINT_API_LOGIN": "localhost:4200/api/login",
+    "ENDPOINT_API_CHAT": "localhost:4200/api/chat"
   }
 }

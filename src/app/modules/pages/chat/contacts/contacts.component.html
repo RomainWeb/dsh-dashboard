@@ -27,5 +27,6 @@
 </mat-toolbar>
 
 <div>
-  <dsh-contacts-list [chatList]="chatList$ | async"></dsh-contacts-list>
+  <dsh-contacts-list [chatList]="chatList"></dsh-contacts-list>
+  <dsh-ghost-list *ngIf="isLoading" [ghosts]="ghosts"></dsh-ghost-list>  
 </div>

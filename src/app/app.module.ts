@@ -17,6 +17,7 @@ import { StoreDevtoolsModule } from '@ngrx/store-devtools';
 import { reducers } from './+state';
 import { environment } from 'src/environments/environment';
 import { FakeBackendInterceptor } from './shared/helpers/fake-backend-interceptor';
+import { FakeBackendInterceptorChat } from './shared/helpers/fake-backend-interceptor-chat';
 
 // APP_INITIALIZER
 export function initializeApp(appConfig: AppConfig) {
@@ -47,6 +48,11 @@ export function initializeApp(appConfig: AppConfig) {
     {
       provide: HTTP_INTERCEPTORS,
       useClass: FakeBackendInterceptor,
+      multi: true
+    },
+    {
+      provide: HTTP_INTERCEPTORS,
+      useClass: FakeBackendInterceptorChat,
       multi: true
     }
   ],

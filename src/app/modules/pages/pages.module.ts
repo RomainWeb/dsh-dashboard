@@ -12,10 +12,20 @@ import { ChatComponent } from './chat/chat.component';
 import { ContactsComponent } from './chat/contacts/contacts.component';
 import { ContactsListComponent } from './chat/contacts/contacts-list/contacts-list.component';
 import { ContactItemComponent } from './chat/contacts/contacts-list/contact-item/contact-item.component';
+import { HTTP_INTERCEPTORS } from '@angular/common/http';
+import { FakeBackendInterceptorChat } from 'src/app/shared/helpers/fake-backend-interceptor-chat';
+import { GhostListComponent } from './chat/contacts/ghost-list/ghost-list.component';
 
 
 @NgModule({
-  declarations: [PagesComponent, LoginComponent, ChatComponent, ContactsComponent, ContactsListComponent, ContactItemComponent],
+  declarations: [
+    PagesComponent,
+    LoginComponent,
+     ChatComponent,
+     ContactsComponent,
+     ContactsListComponent,
+     ContactItemComponent,
+     GhostListComponent],
   imports: [
     CommonModule,
     PagesRoutingModule,

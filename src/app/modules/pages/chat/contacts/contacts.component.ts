@@ -9,14 +9,24 @@ import { Chat } from 'src/app/shared/model/chat/chat';
   styleUrls: ['./contacts.component.scss']
 })
 export class ContactsComponent implements OnInit {
-  chatList$: Observable<Chat[]>;
+  chatList: Chat[];
+  isLoading = false;
+  ghosts = [];
 
   constructor(
     private chatService: ChatService
   ) { }
 
   ngOnInit(): void {
-    this.chatList$ = this.chatService.getChatList();
+    this.loadDatas();
+    this.ghosts = new Array(10);
   }
 
+  loadDatas(): void {
+    this.isLoading = true;
+    this.chatService.getMessageList().subscribe((response: Chat[]) => {
+      this.chatList = response;
+      this.isLoading = false;
+    });
+  }
 }

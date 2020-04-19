@@ -1,3 +1,4 @@
+import { AppConfig } from './../../../../config/app.config';
 import { Chat } from './../../../shared/model/chat/chat';
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
@@ -10,7 +11,7 @@ export class ChatService {
 
   constructor(private http: HttpClient) { }
 
-  getChatList():Observable<Chat[]> {
-    return this.http.get<Chat[]>(`/assets/mock-data/chat/chat-list.json`);
+  getMessageList():Observable<Chat[]> {
+    return this.http.get<Chat[]>(`${AppConfig.settings.SERVER_API.ENDPOINT_API_CHAT}/messages`);
   }
 }
